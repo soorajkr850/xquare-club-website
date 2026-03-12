@@ -1,0 +1,16 @@
+packages:
+  "framer-motion": "For premium smooth animations, scroll reveals, and the hero slider"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility for merging tailwind classes safely"
+
+images:
+  - path: "artifacts/xquare-club/public/images/hero-bg.png"
+    description: "Abstract geometric gradient mesh background in very dark navy blue and pure black, with subtle soft blue light leaks, premium corporate tech style"
+    aspect_ratio: "16:9"
+  - path: "artifacts/xquare-club/public/images/logo-mark.png"
+    description: "Minimalist glowing bright blue letter X logo mark on fully transparent background, modern tech startup style"
+    aspect_ratio: "1:1"
+
+notes:
+  - Single page static application with no backend requirements
+  - Dark mode only enforced via CSS variables
