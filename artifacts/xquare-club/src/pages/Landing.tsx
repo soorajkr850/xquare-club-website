@@ -495,24 +495,20 @@ export default function Landing() {
               <p className="text-white/90 font-medium">No payment. No commitment. Just early access to something built for growth.</p>
             </div>
 
-            {/* Embedded Google Form Placeholder */}
-            <div className="w-full bg-black/50 border border-white/10 rounded-2xl h-[600px] flex flex-col items-center justify-center p-8 text-center relative overflow-hidden group">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,theme(colors.primary/0.05),transparent_50%)]" />
-              <Target className="w-12 h-12 text-white/20 mb-4" />
-              <h4 className="text-xl font-medium text-white/80 mb-2">Registration Form</h4>
-              <p className="text-white/50 mb-8 max-w-sm">Complete the form below to register your interest and secure early access.</p>
-              
-              {/* Fake form UI to look pretty before an iframe loads */}
-              <div className="w-full max-w-md space-y-4 opacity-30 pointer-events-none blur-[1px]">
-                <div className="h-12 bg-white/10 rounded-lg w-full"></div>
-                <div className="h-12 bg-white/10 rounded-lg w-full"></div>
-                <div className="h-24 bg-white/10 rounded-lg w-full"></div>
-                <div className="h-12 bg-primary/40 rounded-lg w-full mt-4"></div>
-              </div>
-              
-              <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                <p className="text-sm text-white/80 font-mono bg-black/80 px-4 py-2 rounded">Google Form Embed Here</p>
-              </div>
+            {/* Embedded Google Form */}
+            <div className="w-full rounded-2xl overflow-hidden border border-white/10">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfOBNZ7Ubi2pbnWT1NIPibsRpvVYEk7D5VD41vYFm-M1w7gRw/viewform?embedded=true"
+                width="100%"
+                height="2078"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                className="block bg-white"
+                title="XQUARE CLUB Influencer Registration Form"
+              >
+                Loading…
+              </iframe>
             </div>
           </div>
         </div>
