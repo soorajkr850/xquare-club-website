@@ -12,3 +12,9 @@ id = "HTEEPlNDNvdnmrbU1X9xY"
 uri = "file://xquare-club-source-code.tar.gz"
 type = "unspecified"
 title = "XQUARE CLUB - Full Source Code"
+
+[[outputs]]
+id = "rjI-HMzJ7Xw-GSQ3LFyp_"
+uri = "file://xquare-club-website.tar.gz"
+type = "unspecified"
+title = "XQUARE CLUB - Website (Fixed - Opens in Browser Directly)"
