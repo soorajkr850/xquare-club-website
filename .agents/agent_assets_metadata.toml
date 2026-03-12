@@ -6,3 +6,9 @@ id = "u8X75kP_N4hTYPdYVic17"
 uri = "file://xquare-club-netlify.tar.gz"
 type = "unspecified"
 title = "XQUARE CLUB - Site Files (for Netlify)"
+
+[[outputs]]
+id = "HTEEPlNDNvdnmrbU1X9xY"
+uri = "file://xquare-club-source-code.tar.gz"
+type = "unspecified"
+title = "XQUARE CLUB - Full Source Code"
