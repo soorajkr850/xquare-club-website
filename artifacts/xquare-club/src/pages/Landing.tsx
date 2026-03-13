@@ -489,14 +489,15 @@ export default function Landing() {
             {/* Embedded Google Form */}
             <div className="w-full rounded-2xl overflow-hidden border border-white/10">
               <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfOBNZ7Ubi2pbnWT1NIPibsRpvVYEk7D5VD41vYFm-M1w7gRw/viewform?embedded=true"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSc9u__sFa4_CHEjIP3K093UL1VklLojNauvLEiCLREvKWCBcQ/viewform?embedded=true"
                 width="100%"
-                height="2078"
+                height="1400"
                 frameBorder="0"
                 marginHeight={0}
                 marginWidth={0}
+                scrolling="yes"
                 className="block bg-white"
-                title="XQUARE CLUB Influencer Registration Form"
+                title="XQUARE CLUB Influencer Onboarding Form"
               >
                 Loading…
               </iframe>
