@@ -44,15 +44,12 @@ export default function Landing() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-40 border-b border-white/5 bg-black/60 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center">
             <img 
-              src={`${import.meta.env.BASE_URL}images/logo-mark.png`} 
+              src={`${import.meta.env.BASE_URL}images/xquare-logo.png`} 
               alt="XQUARE CLUB Logo" 
-              className="w-10 h-10 object-contain"
+              className="h-10 w-auto object-contain"
             />
-            <span className="font-display font-bold text-xl tracking-wider text-white">
-              XQUARE <span className="text-primary">CLUB</span>
-            </span>
           </div>
           <div className="hidden md:flex gap-4">
             <Button variant="ghost" size="sm" onClick={() => document.getElementById("about")?.scrollIntoView()}>About</Button>
@@ -546,15 +543,12 @@ export default function Landing() {
       <footer className="border-t border-white/10 bg-black pt-16 pb-8 text-center md:text-left relative z-20">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center mb-12">
           <div>
-            <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
+            <div className="flex items-center justify-center md:justify-start mb-4">
               <img 
-                src={`${import.meta.env.BASE_URL}images/logo-mark.png`} 
+                src={`${import.meta.env.BASE_URL}images/xquare-logo.png`} 
                 alt="XQUARE CLUB Logo" 
-                className="w-8 h-8 opacity-80"
+                className="h-10 w-auto object-contain"
               />
-              <span className="font-display font-bold text-xl tracking-wider text-white">
-                XQUARE <span className="text-primary">CLUB</span>
-              </span>
             </div>
             <p className="text-white/50 text-sm max-w-sm mx-auto md:mx-0">
               A community-driven platform connecting small businesses and growing influencers.
