@@ -1,26 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { ChevronRight, CheckCircle2, TrendingUp, Users, Target, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/Button";
 import { SellerModal } from "@/components/SellerModal";
 import { Section } from "@/components/Section";
 
-const SLIDES = [
-  "Heavy budget for collab promotions? XQUARE CLUB helps small businesses explore smarter and more accessible promotion opportunities.",
-  "Not getting brand collab opportunities yet? XQUARE CLUB gives growing influencers a better path to product promotions.",
-  "Collaboration feels too hard or too expensive? XQUARE CLUB makes business-influencer connections more practical and more open."
-];
-
 export default function Landing() {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [isSellerModalOpen, setIsSellerModalOpen] = useState(false);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
 
   const scrollToRegister = () => {
     document.getElementById("register")?.scrollIntoView({ behavior: "smooth" });
@@ -113,43 +99,10 @@ export default function Landing() {
               <ActionButtons />
               <p className="mt-6 text-sm text-white/50 flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-primary" />
-                Influencer early access is free. Sellers can contact us directly for onboarding.
+                Early access is free. Influencers and Sellers can submit the onboarding form now!
               </p>
             </motion.div>
 
-            {/* Slider */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8, duration: 1 }}
-              className="mt-20 md:mt-32 p-6 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md relative overflow-hidden"
-            >
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
-              <div className="h-[80px] md:h-[60px] flex items-center">
-                <AnimatePresence mode="wait">
-                  <motion.p
-                    key={currentSlide}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.4 }}
-                    className="text-lg md:text-xl font-medium text-white/90"
-                  >
-                    "{SLIDES[currentSlide]}"
-                  </motion.p>
-                </AnimatePresence>
-              </div>
-              <div className="flex gap-2 mt-4">
-                {SLIDES.map((_, idx) => (
-                  <div 
-                    key={idx} 
-                    className={`h-1.5 rounded-full transition-all duration-500 ${
-                      idx === currentSlide ? "w-8 bg-primary" : "w-2 bg-white/20"
-                    }`}
-                  />
-                ))}
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -236,7 +189,7 @@ export default function Landing() {
 
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* Card 1 */}
-          <div className="relative p-[1px] rounded-3xl bg-gradient-to-b from-white/20 to-white/0 overflow-hidden group">
+          <motion.div whileHover={{ y: -5 }} className="relative p-[1px] rounded-3xl bg-gradient-to-b from-white/20 to-white/0 overflow-hidden group">
             <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="h-full bg-card rounded-[23px] p-8 md:p-10 relative z-10 flex flex-col">
               <div className="inline-flex px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-semibold tracking-wider text-white/80 uppercase mb-6 w-max">
@@ -246,10 +199,10 @@ export default function Landing() {
                 Businesses can list their products, build visibility, and explore influencer-led promotion in a more practical and budget-friendly way.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 2 */}
-          <div className="relative p-[1px] rounded-3xl bg-gradient-to-b from-primary/50 to-white/0 overflow-hidden group transform md:-translate-y-4 shadow-[0_0_40px_-10px_rgba(59,130,246,0.2)]">
+          <motion.div whileHover={{ y: -5 }} className="relative p-[1px] rounded-3xl bg-gradient-to-b from-primary/50 to-white/0 overflow-hidden group transform md:-translate-y-4 shadow-[0_0_40px_-10px_rgba(59,130,246,0.2)]">
             <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="h-full bg-card rounded-[23px] p-8 md:p-10 relative z-10 flex flex-col">
               <div className="inline-flex px-4 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-sm font-semibold tracking-wider text-primary uppercase mb-6 w-max">
@@ -259,11 +212,11 @@ export default function Landing() {
                 Influencers can create their presence on the platform, discover products they can promote, and benefit from the activity generated through their promotions.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 3 */}
-          <div className="relative p-[1px] rounded-3xl bg-gradient-to-b from-white/20 to-white/0 overflow-hidden group">
-             <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <motion.div whileHover={{ y: -5 }} className="relative p-[1px] rounded-3xl bg-gradient-to-b from-white/20 to-white/0 overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="h-full bg-card rounded-[23px] p-8 md:p-10 relative z-10 flex flex-col">
               <div className="inline-flex px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-semibold tracking-wider text-white/80 uppercase mb-6 w-max">
                 For Customers
@@ -272,7 +225,7 @@ export default function Landing() {
                 Customers can discover products through creators, recommendations, and content that feels more engaging and relatable.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         <div className="flex justify-center">
