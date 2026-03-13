@@ -188,44 +188,26 @@ export default function Landing() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {/* Card 1 */}
-          <motion.div whileHover={{ y: -5 }} className="relative p-[1px] rounded-3xl bg-gradient-to-b from-white/20 to-white/0 overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="h-full bg-card rounded-[23px] p-8 md:p-10 relative z-10 flex flex-col">
-              <div className="inline-flex px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-semibold tracking-wider text-white/80 uppercase mb-6 w-max">
-                For Businesses
+          {[
+            { label: "For Businesses", text: "Businesses can list their products, build visibility, and explore influencer-led promotion in a more practical and budget-friendly way." },
+            { label: "For Influencers", text: "Influencers can create their presence on the platform, discover products they can promote, and benefit from the activity generated through their promotions." },
+            { label: "For Customers",  text: "Customers can discover products through creators, recommendations, and content that feels more engaging and relatable." },
+          ].map((card, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ y: -5, boxShadow: "0 0 35px -5px rgba(59,130,246,0.45)" }}
+              transition={{ duration: 0.25 }}
+              className="relative p-[1px] rounded-3xl bg-gradient-to-b from-white/20 to-white/0 overflow-hidden group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+              <div className="h-full bg-card rounded-[23px] p-8 md:p-10 relative z-10 flex flex-col">
+                <div className="inline-flex px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-semibold tracking-wider text-white/80 uppercase mb-6 w-max">
+                  {card.label}
+                </div>
+                <p className="text-xl leading-relaxed flex-grow">{card.text}</p>
               </div>
-              <p className="text-xl leading-relaxed flex-grow">
-                Businesses can list their products, build visibility, and explore influencer-led promotion in a more practical and budget-friendly way.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Card 2 */}
-          <motion.div whileHover={{ y: -5 }} className="relative p-[1px] rounded-3xl bg-gradient-to-b from-primary/50 to-white/0 overflow-hidden group transform md:-translate-y-4 shadow-[0_0_40px_-10px_rgba(59,130,246,0.2)]">
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="h-full bg-card rounded-[23px] p-8 md:p-10 relative z-10 flex flex-col">
-              <div className="inline-flex px-4 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-sm font-semibold tracking-wider text-primary uppercase mb-6 w-max">
-                For Influencers
-              </div>
-              <p className="text-xl leading-relaxed flex-grow">
-                Influencers can create their presence on the platform, discover products they can promote, and benefit from the activity generated through their promotions.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Card 3 */}
-          <motion.div whileHover={{ y: -5 }} className="relative p-[1px] rounded-3xl bg-gradient-to-b from-white/20 to-white/0 overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="h-full bg-card rounded-[23px] p-8 md:p-10 relative z-10 flex flex-col">
-              <div className="inline-flex px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-semibold tracking-wider text-white/80 uppercase mb-6 w-max">
-                For Customers
-              </div>
-              <p className="text-xl leading-relaxed flex-grow">
-                Customers can discover products through creators, recommendations, and content that feels more engaging and relatable.
-              </p>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
 
         <div className="flex justify-center">
