@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronRight, ArrowRight, CheckCircle2, TrendingUp, Users, Target, ShieldCheck } from "lucide-react";
+import { ChevronRight, CheckCircle2, TrendingUp, Users, Target, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/Button";
 import { SellerModal } from "@/components/SellerModal";
 import { Section } from "@/components/Section";
@@ -28,9 +28,8 @@ export default function Landing() {
 
   const ActionButtons = ({ className = "" }: { className?: string }) => (
     <div className={`flex flex-col sm:flex-row gap-4 ${className}`}>
-      <Button variant="primary" size="lg" onClick={scrollToRegister} className="group">
+      <Button variant="primary" size="lg" onClick={scrollToRegister}>
         Join as an Influencer
-        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
       </Button>
       <Button variant="outline" size="lg" onClick={() => setIsSellerModalOpen(true)}>
         List Your Business
@@ -472,11 +471,6 @@ export default function Landing() {
             <p className="text-lg text-white/60 mb-8">
               This is your chance to become part of XQUARE CLUB from the beginning. Registration is completely free.
             </p>
-            <div className="flex justify-center">
-              <Button variant="outline" size="lg" onClick={() => setIsSellerModalOpen(true)}>
-                Are you a business? List here.
-              </Button>
-            </div>
           </div>
 
           <div className="bg-card border border-card-border rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">

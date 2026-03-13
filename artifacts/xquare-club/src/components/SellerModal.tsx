@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Phone, MessageCircle } from "lucide-react";
+import { X, Phone } from "lucide-react";
 import { Button } from "./Button";
 
 interface SellerModalProps {
@@ -82,10 +82,9 @@ export function SellerModal({ isOpen, onClose }: SellerModalProps) {
                   </Button>
                   <Button 
                     variant="primary" 
-                    className="w-full sm:w-auto flex items-center gap-2"
+                    className="w-full sm:w-auto"
                     onClick={() => window.location.href = "tel:+15551234567"}
                   >
-                    <MessageCircle size={18} />
                     Contact Now
                   </Button>
                 </div>
