@@ -52,5 +52,69 @@
     "profilePhotoName": "image.png (3).png",
     "kycDocName": "image.png (3).png",
     "_submittedAt": "2026-03-16T12:16:36.952Z"
+  },
+  {
+    "consent": true,
+    "platform": "Instagram",
+    "handle": "ugi",
+    "profileLink": "dsf",
+    "followerRange": "Under 1k",
+    "niches": [
+      "Fashion / Beauty / Skincare"
+    ],
+    "nicheOther": "",
+    "earnMethods": [
+      "Brand collaborations (paid promotions)"
+    ],
+    "earnOther": "",
+    "collabFreq": "Weekly or more",
+    "collabSource": [
+      "Brands contact me directly"
+    ],
+    "collabSourceOther": "",
+    "pricingMethod": [
+      "Fixed pricing (mostly the same rate)"
+    ],
+    "pricingOther": "",
+    "priceRange": "₹1,000 – ₹3,000",
+    "fullName": "Learners Techzit",
+    "mobile": "566",
+    "email": "techzitlearners@gmail.com",
+    "city": "edwd",
+    "state": "kerala",
+    "kycType": "pdf",
+    "kycNumber": "454654",
+    "dashboardScreenshotName": "image.png (3).png",
+    "profilePhotoName": "image.png (3).png",
+    "kycDocName": "image.png (3).png",
+    "_submittedAt": "2026-03-16T12:32:43.925Z"
+  },
+  {
+    "consent": true,
+    "platform": "Instagram",
+    "handle": "@xquaretest",
+    "profileLink": "https://instagram.com/xquaretest",
+    "followerRange": "10k – 30k",
+    "niches": [
+      "Travel",
+      "Lifestyle"
+    ],
+    "earnMethods": [
+      "Brand collaborations (paid promotions)"
+    ],
+    "collabFreq": "Monthly",
+    "collabSource": [
+      "Brands contact me directly"
+    ],
+    "pricingMethod": [
+      "Fixed pricing (mostly the same rate)"
+    ],
+    "priceRange": "₹3,000 – ₹7,000",
+    "fullName": "Test Influencer",
+    "mobile": "9876543210",
+    "email": "test@xquareclub.com",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "_submittedAt": "2026-03-16T12:34:18.862Z"
   }
 ]
