@@ -150,12 +150,17 @@ function CheckGroup({ options, selected, onChange, max }: {
   return (
     <div className="grid sm:grid-cols-2 gap-2.5">
       {options.map(opt => (
-        <label key={opt} className={`flex items-center gap-3 px-4 py-3 rounded-xl border cursor-pointer transition-all select-none ${selected.includes(opt) ? "border-primary bg-primary/10 text-white" : "border-white/10 bg-white/[0.02] text-white/60 hover:border-white/25 hover:text-white/80"}`}>
+        <button
+          type="button"
+          key={opt}
+          onClick={() => toggle(opt)}
+          className={`flex items-center gap-3 px-4 py-3 rounded-xl border text-left cursor-pointer transition-all select-none w-full ${selected.includes(opt) ? "border-primary bg-primary/10 text-white" : "border-white/10 bg-white/[0.02] text-white/60 hover:border-white/25 hover:text-white/80"}`}
+        >
           <div className={`w-4 h-4 rounded border-2 flex-shrink-0 flex items-center justify-center transition-colors ${selected.includes(opt) ? "bg-primary border-primary" : "border-white/30"}`}>
-            {selected.includes(opt) && <svg viewBox="0 0 10 8" className="w-2.5 h-2 text-white fill-current"><path d="M1 4l3 3 5-6" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/></svg>}
+            {selected.includes(opt) && <svg viewBox="0 0 10 8" className="w-2.5 h-2 text-white fill-none stroke-current"><path d="M1 4l3 3 5-6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>}
           </div>
           <span className="text-sm leading-snug">{opt}</span>
-        </label>
+        </button>
       ))}
     </div>
   );
@@ -167,12 +172,17 @@ function RadioGroup({ options, selected, onChange }: {
   return (
     <div className="flex flex-col gap-2.5">
       {options.map(opt => (
-        <label key={opt} className={`flex items-center gap-3 px-4 py-3 rounded-xl border cursor-pointer transition-all select-none ${selected === opt ? "border-primary bg-primary/10 text-white" : "border-white/10 bg-white/[0.02] text-white/60 hover:border-white/25 hover:text-white/80"}`}>
+        <button
+          type="button"
+          key={opt}
+          onClick={() => onChange(opt)}
+          className={`flex items-center gap-3 px-4 py-3 rounded-xl border text-left cursor-pointer transition-all select-none w-full ${selected === opt ? "border-primary bg-primary/10 text-white" : "border-white/10 bg-white/[0.02] text-white/60 hover:border-white/25 hover:text-white/80"}`}
+        >
           <div className={`w-4 h-4 rounded-full border-2 flex-shrink-0 flex items-center justify-center transition-colors ${selected === opt ? "border-primary" : "border-white/30"}`}>
             {selected === opt && <div className="w-2 h-2 rounded-full bg-primary" />}
           </div>
           <span className="text-sm">{opt}</span>
-        </label>
+        </button>
       ))}
     </div>
   );
