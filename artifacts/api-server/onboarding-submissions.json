@@ -255,5 +255,45 @@
     "profilePhotoUrl": "https://drive.google.com/file/d/1mHfgCc3bH8LCNAqebcIgZ6iYfMq0pQlx/view?usp=drivesdk",
     "kycDocUrl": "https://drive.google.com/file/d/1uP2oCbCj361ytDZ637IuoSAEegSvR6jY/view?usp=drivesdk",
     "_submittedAt": "2026-03-16T12:55:45.322Z"
+  },
+  {
+    "consent": true,
+    "platform": "Instagram",
+    "handle": "praveekumar",
+    "profileLink": "https://www.instagram.com/?hl=en",
+    "followerRange": "50k–100k",
+    "niches": [
+      "Fashion / Beauty / Skincare",
+      "Travel",
+      "Education",
+      "Parenting / Kids",
+      "Finance / Business"
+    ],
+    "nicheOther": "",
+    "earnMethods": [
+      "Brand collaborations (paid promotions)"
+    ],
+    "earnOther": "",
+    "collabFreq": "Weekly or more",
+    "collabSource": [
+      "Brands contact me directly"
+    ],
+    "collabSourceOther": "",
+    "pricingMethod": [
+      "Fixed pricing (mostly the same rate)"
+    ],
+    "pricingOther": "",
+    "priceRange": "Under ₹1,000",
+    "fullName": "praveeen",
+    "mobile": "934528674",
+    "email": "pravenn@gmail.com",
+    "city": "kl",
+    "state": "kl",
+    "kycType": "pdf",
+    "kycNumber": "2546",
+    "dashboardScreenshotUrl": "https://drive.google.com/file/d/1QnFnqp24tBNI6evZjHs1uJRvhJXjmEaU/view?usp=drivesdk",
+    "profilePhotoUrl": "https://drive.google.com/file/d/1dgfQUzpuxxuxZK7qkSbmN8C_H3egwJfW/view?usp=drivesdk",
+    "kycDocUrl": "https://drive.google.com/file/d/1f4voxHh2Nxc2qhfJnugm7VW8xQUXYEOE/view?usp=drivesdk",
+    "_submittedAt": "2026-03-16T13:04:57.274Z"
   }
 ]
