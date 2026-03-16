@@ -1,6 +1,7 @@
 import { Router } from "express";
 import fs from "fs";
 import path from "path";
+import { appendToSheet } from "../lib/googleSheets.js";
 
 const router = Router();
 
@@ -107,14 +108,17 @@ router.post("/onboarding", async (req, res) => {
   try {
     saveSubmission(body);
   } catch (err) {
-    console.error("Failed to save submission:", err);
+    console.error("Failed to save submission locally:", err);
   }
 
-  /* best-effort forward to Google Forms (fire and forget) */
-  postToGoogleForms(body).then(ok => {
-    if (ok) console.log("[onboarding] Google Forms submission successful");
-    else    console.warn("[onboarding] Google Forms submission failed or pending entry IDs");
-  }).catch(() => {});
+  /* write to Google Sheets (fire and forget) */
+  if (process.env["GOOGLE_SHEET_ID"] && process.env["GOOGLE_SERVICE_ACCOUNT_JSON"]) {
+    appendToSheet(body)
+      .then(() => console.log("[onboarding] Written to Google Sheets successfully"))
+      .catch(err => console.error("[onboarding] Google Sheets write failed:", err));
+  } else {
+    console.warn("[onboarding] GOOGLE_SHEET_ID or GOOGLE_SERVICE_ACCOUNT_JSON not set — skipping Sheets write");
+  }
 
   res.json({ success: true, message: "Submission received" });
 });

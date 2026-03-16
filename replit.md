@@ -91,6 +91,34 @@ Generated Zod schemas from the OpenAPI spec (e.g. `HealthCheckResponse`). Used b
 
 Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHealthCheck`, `healthCheck`).
 
+### `artifacts/xquare-club` (`@workspace/xquare-club`)
+
+XQUARE CLUB landing page + influencer onboarding form. React + Vite + Tailwind.
+
+- Landing page: `src/pages/Landing.tsx`
+- Onboarding form: `src/pages/InfluencerOnboarding.tsx` (native form, routes to `/influencer-onboarding`)
+- Routing: `src/App.tsx` (simple `window.location.pathname` routing, no router library)
+- Design: black (#000000)/navy background, white text, blue accents (#3b82f6), no light mode
+- Logo: `public/images/xquare-logo.png`, Favicon: `public/favicon.ico`
+
+### Google Sheets integration (onboarding submissions)
+
+Submissions from `/influencer-onboarding` are POSTed to `POST /api/onboarding`.
+The API server saves locally to `onboarding-submissions.json` and also writes to Google Sheets if env vars are set.
+
+**Required env vars** (not yet set — Google OAuth was dismissed by user):
+- `GOOGLE_SHEET_ID` — the ID from the Google Spreadsheet URL
+- `GOOGLE_SERVICE_ACCOUNT_JSON` — full JSON credentials from a Google Cloud service account with Sheets API access
+
+To set up:
+1. Create a project in Google Cloud Console → enable Sheets API
+2. Create a Service Account → download JSON key
+3. Share the target spreadsheet with the service account email (Editor)
+4. Set both env vars in Replit Secrets
+5. The server will auto-create headers on first write
+
+NOTE: Replit's built-in Google Sheets connector was dismissed. Use service account credentials instead (see above).
+
 ### `scripts` (`@workspace/scripts`)
 
 Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.

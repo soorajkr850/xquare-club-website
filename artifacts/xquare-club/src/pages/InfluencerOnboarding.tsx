@@ -347,15 +347,18 @@ export default function InfluencerOnboarding() {
 
           {/* ── Section 1: Consent ── */}
           <SectionCard title="Consent">
-            <label className={`flex items-start gap-4 p-4 rounded-xl border cursor-pointer transition-all select-none ${form.consent ? "border-primary bg-primary/10" : "border-white/10 hover:border-white/25"}`}>
+            <button
+              type="button"
+              onClick={() => set("consent", !form.consent)}
+              className={`flex items-start gap-4 p-4 rounded-xl border w-full text-left cursor-pointer transition-all select-none ${form.consent ? "border-primary bg-primary/10" : "border-white/10 hover:border-white/25"}`}
+            >
               <div className={`w-5 h-5 mt-0.5 rounded border-2 flex-shrink-0 flex items-center justify-center transition-colors ${form.consent ? "bg-primary border-primary" : "border-white/30"}`}>
                 {form.consent && <svg viewBox="0 0 10 8" className="w-3 h-2.5 text-white fill-none stroke-current"><path d="M1 4l3 3 5-6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>}
               </div>
               <span className="text-sm text-white/80 leading-relaxed">
                 I am interested in Early Access and I agree that my submitted details may be used for onboarding and communication. <span className="text-red-400">*</span>
               </span>
-              <input type="checkbox" className="hidden" checked={form.consent} onChange={e => set("consent", e.target.checked)} />
-            </label>
+            </button>
             {errors.consent && <p className={errClass} data-err>{errors.consent}</p>}
           </SectionCard>
 
