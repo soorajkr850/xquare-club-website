@@ -6,8 +6,7 @@ import { CheckCircle2, Upload, ChevronRight } from "lucide-react";
 const PLATFORMS = ["Instagram", "YouTube", "Facebook", "X (Twitter)", "Snapchat", "Other"];
 
 const FOLLOWER_RANGES = [
-  "Under 1k", "1k – 5k", "5k – 10k", "10k – 30k",
-  "30k – 50k", "50k – 100k", "100k+"
+  "50k – 100k"
 ];
 
 const NICHES = [
