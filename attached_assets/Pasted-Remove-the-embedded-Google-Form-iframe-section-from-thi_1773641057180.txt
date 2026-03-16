@@ -1,0 +1,59 @@
+Remove the embedded Google Form/iframe section from this page and replace it with a fully custom website form that matches the current dark theme design.
+
+Create a separate influencer onboarding form section/page with these grouped sections:
+
+1. Consent
+- Checkbox, required
+- Text: I am interested in Early Access and I agree that my submitted details may be used for onboarding and communication.
+
+2. Social Media Profile Details
+- Primary social platform (dropdown, required)
+- Social media username / handle (text, required)
+- Social profile link (url, required)
+
+3. Social Media Dashboard / Insights
+- Primary Platform (dropdown or radio, required)
+- Social Media Handle / User ID (text, required)
+- Profile Link (url, required)
+- Social Media Dashboard Screenshot (file upload, optional)
+- Follower Count Range (single choice)
+
+4. Niche
+- Which niche best describes your content? (checkboxes, required)
+- Add instruction text: Select up to 10
+- Add all niche options
+- Add: If Others, please specify (text, optional)
+
+5. Brand Collaboration & Monetization
+- How do you currently earn from your social media? (checkboxes)
+- If Other, please specify (text)
+- How often do you get brand collaboration opportunities? (single choice)
+- How do you usually get collaborations? (checkboxes)
+- If Other, please specify (text)
+- How is your pricing usually decided? (checkboxes)
+- If Other, please specify (text)
+- What is your typical paid collaboration price range? (single choice)
+
+6. Basic Details / KYC
+- Add section description:
+  Note: These details help us verify your profile for Early Access and onboarding. Your information will be kept confidential.
+- Full name (text, required)
+- Mobile number (text, required)
+- Email (email, required)
+- Location (City/District) (text, required)
+- State (text, required)
+- Profile photo (file upload, required)
+- KYC document type (text or dropdown, optional)
+- KYC document number (text, optional)
+- KYC document upload / link (file upload or text, optional)
+
+Style the form to match the existing XQUARE CLUB landing page:
+- dark theme
+- blue accent
+- rounded cards
+- responsive layout
+- clean spacing
+- proper validation
+- large submit button
+
+Do not use iframe or Google Form embed. Build the fields directly in the website UI.
