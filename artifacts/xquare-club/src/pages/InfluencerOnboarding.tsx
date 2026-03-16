@@ -253,50 +253,47 @@ export default function InfluencerOnboarding() {
     setSubmitting(true);
 
     try {
-      /* Submit text/radio/checkbox fields to our API, which forwards to Google Forms.
-         File uploads (dashboard screenshot, profile photo, KYC doc) are browser-local
-         and cannot be sent via standard cross-origin POST — the user should upload
-         these to Google Drive and share the link separately if required. */
-      const payload = {
-        consent:       form.consent,
-        platform:      form.platform,
-        handle:        form.handle,
-        profileLink:   form.profileLink,
-        followerRange: form.followerRange,
-        niches:        form.niches,
-        nicheOther:    form.nicheOther,
-        earnMethods:   form.earnMethods,
-        earnOther:     form.earnOther,
-        collabFreq:    form.collabFreq,
-        collabSource:  form.collabSource,
-        collabSourceOther: form.collabSourceOther,
-        pricingMethod: form.pricingMethod,
-        pricingOther:  form.pricingOther,
-        priceRange:    form.priceRange,
-        fullName:      form.fullName,
-        mobile:        form.mobile,
-        email:         form.email,
-        city:          form.city,
-        state:         form.state,
-        kycType:       form.kycType,
-        kycNumber:     form.kycNumber,
-        /* file names only — actual files can't go through JSON API */
-        dashboardScreenshotName: form.dashboardScreenshot?.name ?? null,
-        profilePhotoName:        form.profilePhoto?.name ?? null,
-        kycDocName:              form.kycDoc?.name ?? null,
-      };
+      /* Build multipart/form-data so actual files get uploaded to the server */
+      const fd = new FormData();
+
+      /* text / choice fields */
+      fd.append("consent",           String(form.consent));
+      fd.append("platform",          form.platform);
+      fd.append("handle",            form.handle);
+      fd.append("profileLink",       form.profileLink);
+      fd.append("followerRange",     form.followerRange);
+      form.niches.forEach(v   => fd.append("niches",        v));
+      fd.append("nicheOther",        form.nicheOther);
+      form.earnMethods.forEach(v => fd.append("earnMethods", v));
+      fd.append("earnOther",         form.earnOther);
+      fd.append("collabFreq",        form.collabFreq);
+      form.collabSource.forEach(v  => fd.append("collabSource",  v));
+      fd.append("collabSourceOther", form.collabSourceOther);
+      form.pricingMethod.forEach(v => fd.append("pricingMethod", v));
+      fd.append("pricingOther",      form.pricingOther);
+      fd.append("priceRange",        form.priceRange);
+      fd.append("fullName",          form.fullName);
+      fd.append("mobile",            form.mobile);
+      fd.append("email",             form.email);
+      fd.append("city",              form.city);
+      fd.append("state",             form.state);
+      fd.append("kycType",           form.kycType);
+      fd.append("kycNumber",         form.kycNumber);
+
+      /* actual files */
+      if (form.dashboardScreenshot) fd.append("dashboardScreenshot", form.dashboardScreenshot);
+      if (form.profilePhoto)        fd.append("profilePhoto",        form.profilePhoto);
+      if (form.kycDoc)              fd.append("kycDoc",              form.kycDoc);
 
       const res = await fetch("/api/onboarding", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: fd, /* browser sets Content-Type with correct boundary automatically */
       });
 
       if (!res.ok) throw new Error(`Server error ${res.status}`);
 
     } catch (err) {
       console.error("Submission error:", err);
-      /* Still show success — data is saved, file upload issue is known limitation */
     }
 
     setSubmitting(false);

@@ -188,5 +188,35 @@
     "profilePhotoName": "image.png (3).png",
     "kycDocName": "image.png (3).png",
     "_submittedAt": "2026-03-16T12:46:06.714Z"
+  },
+  {
+    "consent": true,
+    "platform": "Instagram",
+    "handle": "xquaretest",
+    "profileLink": "https://instagram.com/xquaretest",
+    "followerRange": "10k",
+    "niches": [
+      "Travel"
+    ],
+    "nicheOther": "",
+    "earnMethods": [],
+    "earnOther": "",
+    "collabFreq": "Monthly",
+    "collabSource": [],
+    "collabSourceOther": "",
+    "pricingMethod": [],
+    "pricingOther": "",
+    "priceRange": "Under 1k",
+    "fullName": "Test User",
+    "mobile": "9876543210",
+    "email": "test@test.com",
+    "city": "Chennai",
+    "state": "TN",
+    "kycType": "",
+    "kycNumber": "",
+    "dashboardScreenshotUrl": "https://drive.google.com/file/d/1_F-QnLN8FrezsofjIMMsQkjvZO5TgF5i/view?usp=drivesdk",
+    "profilePhotoUrl": "https://drive.google.com/file/d/16W5dDXkeXQ6IqV3EraRpZ5f4AvDvrKTf/view?usp=drivesdk",
+    "kycDocUrl": null,
+    "_submittedAt": "2026-03-16T12:51:38.623Z"
   }
 ]
