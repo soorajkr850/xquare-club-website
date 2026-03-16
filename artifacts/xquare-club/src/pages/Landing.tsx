@@ -410,32 +410,45 @@ export default function Landing() {
 
           <div className="bg-card border border-card-border rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-blue-600 to-primary" />
-            
+
             <h3 className="text-3xl mb-4 font-display">Join XQUARE CLUB as an Influencer</h3>
             <p className="text-white/70 mb-8">
-              Fill out the form below to express your interest in joining XQUARE CLUB as an influencer. Once registered, our team will review your submission and connect with you on the next steps.
+              Fill out our onboarding form to express your interest in joining XQUARE CLUB as an influencer. Once registered, our team will review your submission and connect with you on the next steps.
             </p>
-            
-            <div className="flex items-center gap-3 mb-10 p-4 bg-white/5 rounded-xl border border-white/10">
-              <ShieldCheck className="text-primary w-6 h-6" />
+
+            <div className="flex items-center gap-3 mb-8 p-4 bg-white/5 rounded-xl border border-white/10">
+              <ShieldCheck className="text-primary w-6 h-6 flex-shrink-0" />
               <p className="text-white/90 font-medium">No payment. No commitment. Just early access to something built for growth.</p>
             </div>
 
-            {/* Embedded Google Form */}
-            <div className="w-full rounded-2xl overflow-hidden border border-white/10">
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSc9u__sFa4_CHEjIP3K093UL1VklLojNauvLEiCLREvKWCBcQ/viewform?embedded=true"
-                width="100%"
-                height="420"
-                frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
-                scrolling="yes"
-                className="block bg-white"
-                title="XQUARE CLUB Influencer Onboarding Form"
+            {/* What the form covers */}
+            <div className="grid sm:grid-cols-2 gap-3 mb-10">
+              {[
+                { icon: "📱", label: "Social Media Profile" },
+                { icon: "📊", label: "Dashboard & Follower Stats" },
+                { icon: "🎯", label: "Your Niche & Content Type" },
+                { icon: "🤝", label: "Brand Collaboration Details" },
+                { icon: "💰", label: "Monetization & Pricing" },
+                { icon: "🪪", label: "Basic Details & KYC" },
+              ].map(item => (
+                <div key={item.label} className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/10">
+                  <span className="text-lg">{item.icon}</span>
+                  <span className="text-white/70 text-sm font-medium">{item.label}</span>
+                  <CheckCircle2 className="w-4 h-4 text-primary ml-auto flex-shrink-0" />
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <motion.button
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => window.location.href = "/influencer-onboarding"}
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-10 py-4 rounded-2xl bg-primary text-white font-bold text-lg shadow-[0_0_30px_-5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_40px_-3px_rgba(59,130,246,0.7)] hover:bg-blue-400 transition-all"
               >
-                Loading…
-              </iframe>
+                Start Application <ChevronRight className="w-5 h-5" />
+              </motion.button>
+              <p className="text-white/30 text-sm">Takes about 5 minutes · Free</p>
             </div>
           </div>
         </div>

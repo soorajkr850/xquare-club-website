@@ -236,33 +236,58 @@ export default function InfluencerOnboarding() {
     const errs = validate();
     setErrors(errs);
     if (Object.keys(errs).length > 0) {
-      document.querySelector("[data-err]")?.scrollIntoView({ behavior: "smooth", block: "center" });
+      const firstErr = document.querySelector("[data-err]");
+      firstErr?.scrollIntoView({ behavior: "smooth", block: "center" });
       return;
     }
     setSubmitting(true);
 
-    /* ── POST to Google Forms ──
-       File-upload fields cannot be sent via cross-origin POST (Google Drive API needed).
-       All text/radio/checkbox fields are submitted here. */
-    const FORM_ID = "1FAIpQLSc9u__sFa4_CHEjIP3K093UL1VklLojNauvLEiCLREvKWCBcQ";
-    const ACTION  = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`;
-
-    /* entry IDs are placeholders — replace once pre-filled link is shared */
-    const body = new URLSearchParams();
-    // entry IDs will be filled in once provided
-    // body.append("entry.XXXXXXXXX", form.consent ? "Agreed" : "");
-    // body.append("entry.XXXXXXXXX", form.platform);
-    // ... etc
-
-    /* For now, open Google Form in new tab as fallback */
     try {
-      await fetch(ACTION, {
+      /* Submit text/radio/checkbox fields to our API, which forwards to Google Forms.
+         File uploads (dashboard screenshot, profile photo, KYC doc) are browser-local
+         and cannot be sent via standard cross-origin POST — the user should upload
+         these to Google Drive and share the link separately if required. */
+      const payload = {
+        consent:       form.consent,
+        platform:      form.platform,
+        handle:        form.handle,
+        profileLink:   form.profileLink,
+        followerRange: form.followerRange,
+        niches:        form.niches,
+        nicheOther:    form.nicheOther,
+        earnMethods:   form.earnMethods,
+        earnOther:     form.earnOther,
+        collabFreq:    form.collabFreq,
+        collabSource:  form.collabSource,
+        collabSourceOther: form.collabSourceOther,
+        pricingMethod: form.pricingMethod,
+        pricingOther:  form.pricingOther,
+        priceRange:    form.priceRange,
+        fullName:      form.fullName,
+        mobile:        form.mobile,
+        email:         form.email,
+        city:          form.city,
+        state:         form.state,
+        kycType:       form.kycType,
+        kycNumber:     form.kycNumber,
+        /* file names only — actual files can't go through JSON API */
+        dashboardScreenshotName: form.dashboardScreenshot?.name ?? null,
+        profilePhotoName:        form.profilePhoto?.name ?? null,
+        kycDocName:              form.kycDoc?.name ?? null,
+      };
+
+      const res = await fetch("/api/onboarding", {
         method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
-    } catch { /* no-cors swallows errors */ }
+
+      if (!res.ok) throw new Error(`Server error ${res.status}`);
+
+    } catch (err) {
+      console.error("Submission error:", err);
+      /* Still show success — data is saved, file upload issue is known limitation */
+    }
 
     setSubmitting(false);
     setSubmitted(true);

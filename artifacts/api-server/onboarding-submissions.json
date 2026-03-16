@@ -1,0 +1,20 @@
+[
+  {
+    "fullName": "Test User",
+    "email": "test@test.com",
+    "mobile": "9999999999",
+    "platform": "Instagram",
+    "handle": "@test",
+    "profileLink": "https://instagram.com/test",
+    "followerRange": "10k – 30k",
+    "niches": [
+      "Travel"
+    ],
+    "collabFreq": "Monthly",
+    "priceRange": "₹1,000 – ₹3,000",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "consent": true,
+    "_submittedAt": "2026-03-16T12:05:00.315Z"
+  }
+]
