@@ -14,7 +14,7 @@ export default function Landing() {
 
   const ActionButtons = ({ className = "" }: { className?: string }) => (
     <div className={`flex flex-col sm:flex-row gap-4 ${className}`}>
-      <Button variant="primary" size="lg" onClick={scrollToRegister}>
+      <Button variant="primary" size="lg" onClick={() => window.location.href = "/influencer-onboarding"}>
         Join as an Influencer
       </Button>
       <Button variant="outline" size="lg" onClick={() => window.location.href = "/list-your-business"}>

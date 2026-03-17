@@ -334,10 +334,11 @@ export default function InfluencerOnboarding() {
 
         {/* heading */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-10">
-          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary border border-primary/30 bg-primary/10 rounded-full px-4 py-1.5 mb-4">Early Access</span>
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">XQUARE CLUB Influencer Onboarding Form</h1>
-          <p className="text-white/50 text-sm max-w-xl mx-auto">Please fill out this form to register your interest in Early Access to XQUARE CLUB and onboarding. Your submitted details will be used for onboarding, verification, and communication purposes.</p>
-          <p className="text-red-400 text-xs mt-3">* Required fields</p>
+          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary border border-primary/30 bg-primary/10 rounded-full px-4 py-1.5 mb-4">Influencer Onboarding</span>
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">Apply as an Influencer</h1>
+          <p className="text-white/50 text-sm max-w-xl mx-auto">Submit your application to join XQUARE CLUB as an influencer.</p>
+          <p className="text-white/50 text-sm max-w-xl mx-auto mt-2">Your details will be used for review, verification, onboarding, and communication purposes.</p>
+          <p className="text-red-400 text-xs mt-3">* Required Fields</p>
         </motion.div>
 
         <form onSubmit={handleSubmit} className="space-y-5" noValidate>

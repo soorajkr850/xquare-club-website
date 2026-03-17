@@ -301,10 +301,11 @@ export default function BusinessListing() {
             <span className="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium tracking-wide uppercase mb-4">
               Seller Onboarding
             </span>
-            <h1 className="text-3xl md:text-4xl font-bold mb-3">Register Your Business</h1>
-            <p className="text-white/50">
-              Join XQUARE CLUB and connect with influencers who can help your business grow.
+            <h1 className="text-3xl md:text-4xl font-bold mb-3">Apply as a Seller</h1>
+            <p className="text-white/50 mb-2">
+              Submit your application to join XQUARE CLUB as a seller. Your details will be used for review, verification, onboarding, and communication purposes.
             </p>
+            <p className="text-red-400 text-xs">* Required Fields</p>
           </div>
 
           <form onSubmit={handleSubmit} noValidate className="space-y-8">
