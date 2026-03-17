@@ -410,7 +410,7 @@ export default function BusinessListing() {
 
                 <div>
                   <label className={lbl}>Upload Business Verification Document <span className="text-white/30 font-normal">(Optional)</span></label>
-                  <p className="text-xs text-white/30 mb-3">GST Certificate, MSME Certificate, Partnership Deed, Business Registration Certificate, etc.</p>
+                  <p className="text-xs text-white/30 mb-3">Upload any ONE supporting document such as GST Certificate, MSME Certificate, Partnership Deed, Business Registration Certificate, etc.</p>
                   <FileUpload value={form.verificationDoc} onChange={f => set("verificationDoc", f)} />
                 </div>
 
