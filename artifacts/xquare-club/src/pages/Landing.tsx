@@ -485,6 +485,13 @@ export default function Landing() {
         </div>
       </Section>
 
+      {/* Disclaimer — just above footer border */}
+      <div className="bg-black relative z-20 px-6 py-8">
+        <p className="text-white/50 text-sm max-w-3xl mx-auto md:mx-0">
+          *Application submission is currently free for both influencers and sellers. Every application will be reviewed and verified manually by the XQUARE CLUB team before onboarding. Platform onboarding or listing may be subject to charges at a later stage, based on the final approval and commercial process.
+        </p>
+      </div>
+
       {/* Footer */}
       <footer className="border-t border-white/10 bg-black pt-16 pb-8 text-center md:text-left relative z-20">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center mb-12">
@@ -505,11 +512,6 @@ export default function Landing() {
             <button onClick={() => document.getElementById("how-it-works")?.scrollIntoView()} className="hover:text-white transition-colors">How it works</button>
             <button onClick={scrollToRegister} className="hover:text-white transition-colors">Early Access</button>
           </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-6 pb-8">
-          <p className="text-white/50 text-sm max-w-3xl mx-auto md:mx-0">
-            *Application submission is currently free for both influencers and sellers. Every application will be reviewed and verified manually by the XQUARE CLUB team before onboarding. Platform onboarding or listing may be subject to charges at a later stage, based on the final approval and commercial process.
-          </p>
         </div>
         <div className="max-w-7xl mx-auto px-6 text-center text-white/30 text-sm pt-8 border-t border-white/5">
           <p>&copy; {new Date().getFullYear()} XQUARE CLUB. All rights reserved.</p>
