@@ -99,7 +99,7 @@ export default function Landing() {
               <ActionButtons />
               <p className="mt-6 text-sm text-white/50 flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-primary" />
-                Early access is free. Influencers and Sellers can submit the onboarding form now!
+                Applications to Early Access are free*. Influencers and sellers can apply now.
               </p>
             </motion.div>
 
@@ -401,10 +401,13 @@ export default function Landing() {
             </div>
             <h2 className="text-4xl md:text-5xl mb-6">Be among the first to join XQUARE CLUB</h2>
             <p className="text-xl text-white/70 mb-4">
-              We are currently inviting influencers to register for early access to the platform.
+              We are currently inviting influencers to apply for early access to XQUARE CLUB.
+            </p>
+            <p className="text-lg text-white/60 mb-2">
+              This is your opportunity to be part of XQUARE CLUB from the beginning and express your interest in joining the platform.
             </p>
             <p className="text-lg text-white/60 mb-8">
-              This is your chance to become part of XQUARE CLUB from the beginning. Registration is completely free.
+              Submitting your application is completely free.*
             </p>
           </div>
 
@@ -448,7 +451,7 @@ export default function Landing() {
               >
                 Start Application <ChevronRight className="w-5 h-5" />
               </motion.button>
-              <p className="text-white/30 text-sm">Takes about 5 minutes · Free</p>
+              <p className="text-white/30 text-sm">Takes about 5 minutes · Free to apply*</p>
             </div>
           </div>
         </div>
@@ -502,6 +505,11 @@ export default function Landing() {
             <button onClick={() => document.getElementById("how-it-works")?.scrollIntoView()} className="hover:text-white transition-colors">How it works</button>
             <button onClick={scrollToRegister} className="hover:text-white transition-colors">Early Access</button>
           </div>
+        </div>
+        <div className="max-w-7xl mx-auto px-6 pb-8">
+          <p className="text-white/50 text-sm max-w-3xl mx-auto md:mx-0">
+            *Application submission is currently free for both influencers and sellers. Every application will be reviewed and verified manually by the XQUARE CLUB team before onboarding. Platform onboarding or listing may be subject to charges at a later stage, based on the final approval and commercial process.
+          </p>
         </div>
         <div className="max-w-7xl mx-auto px-6 text-center text-white/30 text-sm pt-8 border-t border-white/5">
           <p>&copy; {new Date().getFullYear()} XQUARE CLUB. All rights reserved.</p>
