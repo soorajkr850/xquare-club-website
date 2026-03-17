@@ -295,5 +295,46 @@
     "profilePhotoUrl": "https://drive.google.com/file/d/1dgfQUzpuxxuxZK7qkSbmN8C_H3egwJfW/view?usp=drivesdk",
     "kycDocUrl": "https://drive.google.com/file/d/1f4voxHh2Nxc2qhfJnugm7VW8xQUXYEOE/view?usp=drivesdk",
     "_submittedAt": "2026-03-16T13:04:57.274Z"
+  },
+  {
+    "consent": true,
+    "platform": "Facebook",
+    "handle": "RISHATH",
+    "profileLink": "https://",
+    "followerRange": "50k–100k",
+    "niches": [
+      "Travel",
+      "Fashion / Beauty / Skincare",
+      "Food / Restaurants / Recipes",
+      "Fitness / Sports"
+    ],
+    "nicheOther": "",
+    "earnMethods": [
+      "Brand collaborations (paid promotions)",
+      "Platform monetization (YouTube ads/bonuses, etc.)",
+      "Affiliate commissions (links/codes)",
+      "Selling own products/services"
+    ],
+    "earnOther": "",
+    "collabFreq": "Weekly or more",
+    "collabSource": [
+      "Brands contact me directly",
+      "Agency / manager"
+    ],
+    "collabSourceOther": "",
+    "pricingMethod": [],
+    "pricingOther": "",
+    "priceRange": "Under ₹1,000",
+    "fullName": "Learners Techzit",
+    "mobile": "3215464644",
+    "email": "techzitlearners@gmail.com",
+    "city": "kl",
+    "state": "kl",
+    "kycType": "pdf",
+    "kycNumber": "123654",
+    "dashboardScreenshotUrl": "https://drive.google.com/file/d/1WzvlhdtUHd9f1C_YkTCxE_8hTg5Y6Nz4/view?usp=drivesdk",
+    "profilePhotoUrl": "https://drive.google.com/file/d/1qWLh5Qj4u2xpWNQK92EiqKL8MzB59kPJ/view?usp=drivesdk",
+    "kycDocUrl": "https://drive.google.com/file/d/1MspjL5FGmGwrOAGCXwcWHSf3us1XYzEf/view?usp=drivesdk",
+    "_submittedAt": "17/3/2026, 12:33:47"
   }
 ]

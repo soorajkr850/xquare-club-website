@@ -27,7 +27,20 @@ const FOLDER_NAME = "XQUARE CLUB — Influencer Uploads";
 let BUSINESS_SHEET_ID: string | null = "1BGCOC4T8ymbiN_HGuM7AOjaXGkE8yyxYKxoRpWvkzYE";
 const BUSINESS_SHEET_NAME = "XQUARE CLUB — Business Listings";
 const BUSINESS_SHEET_TAB  = "Listings";
-const BUSINESS_HEADERS = ["Submitted At", "First Name", "Last Name", "Business Name"];
+const BUSINESS_HEADERS = [
+  "Submitted At",
+  "Business / Brand Name", "Contact Person Name", "Mobile Number", "Email Address",
+  "Business Address", "City", "State", "PIN Code",
+  "Nature of Business", "Nature of Business (Other)", "MSME Registered",
+  "Business Registration ID", "GST Registration Number", "Verification Document",
+  "Products Sold", "Product Categories", "Product Category (Other)", "Avg Price Range",
+  "Competitor Pricing", "Price Difference from Competitors",
+  "Avg Margin per Product (₹)", "Avg Monthly Sales (₹)",
+  "Sales Channels", "Online Channels", "Online Channels (Other)",
+  "Offline Channels", "Offline Channels (Other)",
+  "Uses ERP/CRM", "ERP/CRM Name", "Interested in ERP/CRM",
+  "Interested in Influencer Marketing", "Additional Details",
+];
 
 const HEADERS = [
   "Submitted At",
@@ -243,11 +256,24 @@ export async function appendToSheet(data: Record<string, unknown>): Promise<void
 }
 
 /* ── ensure business listings spreadsheet exists (find or create) ── */
+let businessHeadersWritten = false;
 async function ensureBusinessSheet(
   sheets: ReturnType<typeof google.sheets>,
   drive: ReturnType<typeof google.drive>
 ): Promise<string> {
-  if (BUSINESS_SHEET_ID) return BUSINESS_SHEET_ID;
+  if (BUSINESS_SHEET_ID) {
+    /* refresh headers once per server lifetime in case schema changed */
+    if (!businessHeadersWritten) {
+      await sheets.spreadsheets.values.update({
+        spreadsheetId: BUSINESS_SHEET_ID,
+        range: `${BUSINESS_SHEET_TAB}!A1`,
+        valueInputOption: "RAW",
+        requestBody: { values: [BUSINESS_HEADERS] },
+      });
+      businessHeadersWritten = true;
+    }
+    return BUSINESS_SHEET_ID;
+  }
 
   /* search for an existing sheet with this name (created by our app) */
   const search = await drive.files.list({
@@ -286,18 +312,47 @@ async function ensureBusinessSheet(
   return BUSINESS_SHEET_ID;
 }
 
-/* ── append a business listing row ── */
+/* ── append a seller onboarding row ── */
 export async function appendBusinessListingToSheet(
-  data: { firstName: string; lastName: string; businessName: string }
+  data: Record<string, string>
 ): Promise<void> {
   const { sheets, drive } = await getClients();
   const sheetId           = await ensureBusinessSheet(sheets, drive);
 
   const row = [
     nowIST(),
-    data.firstName,
-    data.lastName,
-    data.businessName,
+    data.businessName         || "",
+    data.contactName          || "",
+    data.mobile               || "",
+    data.email                || "",
+    data.address              || "",
+    data.city                 || "",
+    data.state                || "",
+    data.pinCode              || "",
+    data.natureOfBusiness     || "",
+    data.natureOther          || "",
+    data.msmeRegistered       || "",
+    data.businessRegId        || "",
+    data.gstNumber            || "",
+    data.verificationDocUrl   || "",
+    data.products             || "",
+    data.productCategories    || "",
+    data.categoryOther        || "",
+    data.avgPriceRange        || "",
+    data.competitorPricing    || "",
+    data.priceDifference      || "",
+    data.avgMargin            || "",
+    data.avgMonthlySales      || "",
+    data.salesChannels        || "",
+    data.onlineChannels       || "",
+    data.onlineOther          || "",
+    data.offlineChannels      || "",
+    data.offlineOther         || "",
+    data.usesErpCrm           || "",
+    data.erpCrmName           || "",
+    data.interestedInErpCrm   || "",
+    data.interestedInInfluencers || "",
+    data.additionalDetails    || "",
   ];
 
   await sheets.spreadsheets.values.append({

@@ -40,5 +40,51 @@
     "lastName": "Test",
     "businessName": "TimeCheck",
     "_submittedAt": "17/3/2026, 12:27:28"
+  },
+  {
+    "firstName": "ABC",
+    "lastName": "DEF",
+    "businessName": "ALPH",
+    "_submittedAt": "17/3/2026, 12:31:17"
+  },
+  {
+    "firstName": "XQUARE",
+    "lastName": "Club",
+    "businessName": "XQUARE business",
+    "_submittedAt": "17/3/2026, 12:48:52"
+  },
+  {
+    "businessName": "Test Brand",
+    "contactName": "Test Person",
+    "mobile": "9876543210",
+    "email": "test@test.com",
+    "address": "123 Main St",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pinCode": "400001",
+    "natureOfBusiness": "Proprietorship",
+    "natureOther": "",
+    "msmeRegistered": "Yes",
+    "businessRegId": "",
+    "gstNumber": "",
+    "products": "Handmade soaps",
+    "productCategories": "Beauty / Personal Care",
+    "categoryOther": "",
+    "avgPriceRange": "₹500 – ₹1,000",
+    "competitorPricing": "Similar to competitors",
+    "priceDifference": "",
+    "avgMargin": "200",
+    "avgMonthlySales": "50000",
+    "salesChannels": "Online",
+    "onlineChannels": "Instagram, WhatsApp",
+    "onlineOther": "",
+    "offlineChannels": "",
+    "offlineOther": "",
+    "usesErpCrm": "No",
+    "erpCrmName": "",
+    "interestedInErpCrm": "Yes",
+    "interestedInInfluencers": "Yes",
+    "additionalDetails": "",
+    "_submittedAt": "17/3/2026, 14:43:32"
   }
 ]
