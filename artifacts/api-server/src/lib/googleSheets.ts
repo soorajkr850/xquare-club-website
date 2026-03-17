@@ -9,6 +9,16 @@ import { google } from "googleapis";
 import type { Readable } from "stream";
 import { Readable as NodeReadable } from "stream";
 
+/* Returns current time as a human-readable string in IST (UTC+5:30) */
+function nowIST(): string {
+  return new Date().toLocaleString("en-IN", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", second: "2-digit",
+    hour12: false,
+  });
+}
+
 const SHEET_ID   = "1AVFWMdj7QrsKdIb7yYev62gniGiLBFloknD55V_EoSw";
 const SHEET_TAB  = "Submissions";
 const FOLDER_NAME = "XQUARE CLUB — Influencer Uploads";
@@ -195,7 +205,7 @@ export async function appendToSheet(data: Record<string, unknown>): Promise<void
     Array.isArray(v) ? v.join(", ") : String(v ?? "");
 
   const row = [
-    new Date().toISOString(),
+    nowIST(),
     data.consent ? "Yes" : "No",
     str(data.platform),
     str(data.handle),
@@ -284,7 +294,7 @@ export async function appendBusinessListingToSheet(
   const sheetId           = await ensureBusinessSheet(sheets, drive);
 
   const row = [
-    new Date().toISOString(),
+    nowIST(),
     data.firstName,
     data.lastName,
     data.businessName,

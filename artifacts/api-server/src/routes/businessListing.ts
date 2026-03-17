@@ -16,7 +16,8 @@ function readListings(): unknown[] {
 
 function saveListing(data: unknown): void {
   const list = readListings();
-  list.push({ ...(data as object), _submittedAt: new Date().toISOString() });
+  const nowIST = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata", hour12: false });
+  list.push({ ...(data as object), _submittedAt: nowIST });
   fs.writeFileSync(DATA_FILE, JSON.stringify(list, null, 2));
 }
 
