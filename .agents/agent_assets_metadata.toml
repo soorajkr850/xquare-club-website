@@ -18,3 +18,9 @@ id = "rjI-HMzJ7Xw-GSQ3LFyp_"
 uri = "file://xquare-club-website.tar.gz"
 type = "unspecified"
 title = "XQUARE CLUB - Website (Fixed - Opens in Browser Directly)"
+
+[[outputs]]
+id = "sgAT1LSCI2AIr9L40sppz"
+uri = "file://XQUARE-CLUB-website.tar.gz"
+type = "unspecified"
+title = "XQUARE CLUB - Built Website"
