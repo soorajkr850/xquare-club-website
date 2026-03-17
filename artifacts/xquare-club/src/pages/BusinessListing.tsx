@@ -281,17 +281,15 @@ export default function BusinessListing() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <button onClick={() => window.location.href = "/"} className="text-sm text-white/50 hover:text-white transition-colors">
-            ← Back
-          </button>
+      {/* top bar */}
+      <div className="sticky top-0 z-40 border-b border-white/5 bg-black/80 backdrop-blur-xl">
+        <div className="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+          <button onClick={() => window.location.href = "/"} className="text-white/50 hover:text-white text-sm transition-colors">← Back</button>
           <img src="/images/xquare-logo.png" alt="XQUARE CLUB" className="h-8 w-auto object-contain" />
         </div>
-      </nav>
+      </div>
 
-      <div className="max-w-2xl mx-auto px-6 pt-32 pb-20">
+      <div className="max-w-2xl mx-auto px-6 pt-12 pb-20">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
 
           {/* header */}
