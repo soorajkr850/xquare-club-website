@@ -13,6 +13,12 @@ const SHEET_ID   = "1AVFWMdj7QrsKdIb7yYev62gniGiLBFloknD55V_EoSw";
 const SHEET_TAB  = "Submissions";
 const FOLDER_NAME = "XQUARE CLUB — Influencer Uploads";
 
+/* ── Business Listings spreadsheet (created on first submission) ── */
+let BUSINESS_SHEET_ID: string | null = null;
+const BUSINESS_SHEET_NAME = "XQUARE CLUB — Business Listings";
+const BUSINESS_SHEET_TAB  = "Listings";
+const BUSINESS_HEADERS = ["Submitted At", "First Name", "Last Name", "Business Name"];
+
 const HEADERS = [
   "Submitted At",
   "Consent",
@@ -223,6 +229,56 @@ export async function appendToSheet(data: Record<string, unknown>): Promise<void
   await sheets.spreadsheets.values.append({
     spreadsheetId: SHEET_ID,
     range: `${SHEET_TAB}!A1`,
+    valueInputOption: "RAW",
+    insertDataOption: "INSERT_ROWS",
+    requestBody: { values: [row] },
+  });
+}
+
+/* ── ensure business listings spreadsheet exists ── */
+async function ensureBusinessSheet(sheets: ReturnType<typeof google.sheets>): Promise<string> {
+  if (BUSINESS_SHEET_ID) return BUSINESS_SHEET_ID;
+
+  const newSheet = await sheets.spreadsheets.create({
+    requestBody: {
+      properties: { title: BUSINESS_SHEET_NAME },
+      sheets: [{ properties: { title: BUSINESS_SHEET_TAB } }],
+    },
+    fields: "spreadsheetId",
+  });
+
+  BUSINESS_SHEET_ID = newSheet.data.spreadsheetId!;
+  console.log(`[sheets] Created Business Listings spreadsheet: ${BUSINESS_SHEET_ID}`);
+  console.log(`[sheets] URL: https://docs.google.com/spreadsheets/d/${BUSINESS_SHEET_ID}/edit`);
+
+  /* write headers */
+  await sheets.spreadsheets.values.update({
+    spreadsheetId: BUSINESS_SHEET_ID,
+    range: `${BUSINESS_SHEET_TAB}!A1`,
+    valueInputOption: "RAW",
+    requestBody: { values: [BUSINESS_HEADERS] },
+  });
+
+  return BUSINESS_SHEET_ID;
+}
+
+/* ── append a business listing row ── */
+export async function appendBusinessListingToSheet(
+  data: { firstName: string; lastName: string; businessName: string }
+): Promise<void> {
+  const { sheets } = await getClients();
+  const sheetId    = await ensureBusinessSheet(sheets);
+
+  const row = [
+    new Date().toISOString(),
+    data.firstName,
+    data.lastName,
+    data.businessName,
+  ];
+
+  await sheets.spreadsheets.values.append({
+    spreadsheetId: sheetId,
+    range: `${BUSINESS_SHEET_TAB}!A1`,
     valueInputOption: "RAW",
     insertDataOption: "INSERT_ROWS",
     requestBody: { values: [row] },

@@ -17,7 +17,7 @@ export default function Landing() {
       <Button variant="primary" size="lg" onClick={scrollToRegister}>
         Join as an Influencer
       </Button>
-      <Button variant="outline" size="lg" onClick={() => setIsSellerModalOpen(true)}>
+      <Button variant="outline" size="lg" onClick={() => window.location.href = "/list-your-business"}>
         List Your Business
       </Button>
     </div>
