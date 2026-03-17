@@ -84,15 +84,6 @@ const INIT: F = {
   interestedInInfluencers:"", additionalDetails:"",
 };
 
-const SECTIONS = [
-  "Basic Business Details",
-  "KYC / Business Identity",
-  "Business & Product Information",
-  "Pricing & Business Performance",
-  "Sales Channels",
-  "Business Systems",
-  "Platform Readiness",
-];
 
 /* ── helpers ── */
 function SectionHeader({ n, title }: { n: number; title: string }) {
@@ -314,15 +305,6 @@ export default function BusinessListing() {
             <p className="text-white/50">
               Join XQUARE CLUB and connect with influencers who can help your business grow.
             </p>
-          </div>
-
-          {/* section pills */}
-          <div className="flex flex-wrap gap-2 justify-center mb-10">
-            {SECTIONS.map((s, i) => (
-              <span key={s} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/40 text-xs">
-                {i + 1}. {s}
-              </span>
-            ))}
           </div>
 
           <form onSubmit={handleSubmit} noValidate className="space-y-8">
