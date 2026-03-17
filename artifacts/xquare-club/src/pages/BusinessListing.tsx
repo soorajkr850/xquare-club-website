@@ -65,9 +65,9 @@ export default function BusinessListing() {
           <div className="w-20 h-20 rounded-full bg-blue-500/20 border border-blue-500/40 flex items-center justify-center mx-auto mb-6">
             <CheckCircle2 className="w-10 h-10 text-blue-500" />
           </div>
-          <h1 className="text-3xl font-bold mb-4">You're listed!</h1>
+          <h1 className="text-3xl font-bold mb-4">You're registered!</h1>
           <p className="text-white/60 mb-8">
-            Thank you for listing your business. Our team will review your details and reach out to you shortly.
+            Thank you for registering your business. Our team will review your details and reach out to you shortly.
           </p>
           <button
             onClick={() => window.location.href = "/"}
