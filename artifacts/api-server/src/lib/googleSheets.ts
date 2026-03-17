@@ -13,8 +13,8 @@ const SHEET_ID   = "1AVFWMdj7QrsKdIb7yYev62gniGiLBFloknD55V_EoSw";
 const SHEET_TAB  = "Submissions";
 const FOLDER_NAME = "XQUARE CLUB — Influencer Uploads";
 
-/* ── Business Listings spreadsheet (created on first submission) ── */
-let BUSINESS_SHEET_ID: string | null = null;
+/* ── Business Listings spreadsheet ── */
+let BUSINESS_SHEET_ID: string | null = "1Ujpt-mFM2RazZAZt-zze1qvd4UsNBUprhParbrDOOf4";
 const BUSINESS_SHEET_NAME = "XQUARE CLUB — Business Listings";
 const BUSINESS_SHEET_TAB  = "Listings";
 const BUSINESS_HEADERS = ["Submitted At", "First Name", "Last Name", "Business Name"];
@@ -52,11 +52,12 @@ const HEADERS = [
 let uploadFolderId: string | null = null;
 let folderCreationPromise: Promise<string> | null = null;
 
-/* ── Replit OAuth token refresh ── */
-let cachedToken: { accessToken: string; expiresAt: number } | null = null;
+/* ── Replit OAuth token — always fetch fresh so refresh is handled by connector ── */
+let cachedToken: { accessToken: string; fetchedAt: number } | null = null;
+const TOKEN_CACHE_MS = 10 * 60 * 1000; // re-fetch every 10 minutes max
 
 async function getAccessToken(): Promise<string> {
-  if (cachedToken && cachedToken.expiresAt > Date.now() + 60_000) {
+  if (cachedToken && Date.now() - cachedToken.fetchedAt < TOKEN_CACHE_MS) {
     return cachedToken.accessToken;
   }
 
@@ -79,7 +80,7 @@ async function getAccessToken(): Promise<string> {
   );
 
   const data = (await response.json()) as {
-    items?: { settings: { access_token?: string; expires_at?: string; oauth?: { credentials?: { access_token?: string } } } }[];
+    items?: { settings: { access_token?: string; oauth?: { credentials?: { access_token?: string } } } }[];
   };
 
   const settings = data.items?.[0]?.settings;
@@ -89,11 +90,7 @@ async function getAccessToken(): Promise<string> {
 
   if (!accessToken) throw new Error("Google Sheet not connected — no access token");
 
-  cachedToken = {
-    accessToken,
-    expiresAt: settings?.expires_at ? new Date(settings.expires_at).getTime() : Date.now() + 3_000_000,
-  };
-
+  cachedToken = { accessToken, fetchedAt: Date.now() };
   return accessToken;
 }
 
@@ -235,10 +232,28 @@ export async function appendToSheet(data: Record<string, unknown>): Promise<void
   });
 }
 
-/* ── ensure business listings spreadsheet exists ── */
-async function ensureBusinessSheet(sheets: ReturnType<typeof google.sheets>): Promise<string> {
+/* ── ensure business listings spreadsheet exists (find or create) ── */
+async function ensureBusinessSheet(
+  sheets: ReturnType<typeof google.sheets>,
+  drive: ReturnType<typeof google.drive>
+): Promise<string> {
   if (BUSINESS_SHEET_ID) return BUSINESS_SHEET_ID;
 
+  /* search for an existing sheet with this name (created by our app) */
+  const search = await drive.files.list({
+    q: `name='${BUSINESS_SHEET_NAME}' and mimeType='application/vnd.google-apps.spreadsheet' and trashed=false`,
+    fields: "files(id,name)",
+    spaces: "drive",
+  });
+
+  if (search.data.files && search.data.files.length > 0) {
+    /* use the most recently created one (first in list) */
+    BUSINESS_SHEET_ID = search.data.files[0].id!;
+    console.log(`[sheets] Found existing Business Listings spreadsheet: ${BUSINESS_SHEET_ID}`);
+    return BUSINESS_SHEET_ID;
+  }
+
+  /* create a fresh one */
   const newSheet = await sheets.spreadsheets.create({
     requestBody: {
       properties: { title: BUSINESS_SHEET_NAME },
@@ -251,7 +266,6 @@ async function ensureBusinessSheet(sheets: ReturnType<typeof google.sheets>): Pr
   console.log(`[sheets] Created Business Listings spreadsheet: ${BUSINESS_SHEET_ID}`);
   console.log(`[sheets] URL: https://docs.google.com/spreadsheets/d/${BUSINESS_SHEET_ID}/edit`);
 
-  /* write headers */
   await sheets.spreadsheets.values.update({
     spreadsheetId: BUSINESS_SHEET_ID,
     range: `${BUSINESS_SHEET_TAB}!A1`,
@@ -266,8 +280,8 @@ async function ensureBusinessSheet(sheets: ReturnType<typeof google.sheets>): Pr
 export async function appendBusinessListingToSheet(
   data: { firstName: string; lastName: string; businessName: string }
 ): Promise<void> {
-  const { sheets } = await getClients();
-  const sheetId    = await ensureBusinessSheet(sheets);
+  const { sheets, drive } = await getClients();
+  const sheetId           = await ensureBusinessSheet(sheets, drive);
 
   const row = [
     new Date().toISOString(),
