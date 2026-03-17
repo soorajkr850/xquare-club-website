@@ -486,10 +486,12 @@ export default function Landing() {
       </Section>
 
       {/* Disclaimer — just above footer border */}
-      <div className="bg-black relative z-20 px-6 py-8">
-        <p className="text-white/50 text-sm max-w-3xl mx-auto md:mx-0">
-          *Application submission is currently free for both influencers and sellers. Every application will be reviewed and verified manually by the XQUARE CLUB team before onboarding. Platform onboarding or listing may be subject to charges at a later stage, based on the final approval and commercial process.
-        </p>
+      <div className="bg-black relative z-20">
+        <div className="max-w-7xl mx-auto px-6 py-8">
+          <p className="text-white/50 text-sm max-w-3xl">
+            *Application submission is currently free for both influencers and sellers. Every application will be reviewed and verified manually by the XQUARE CLUB team before onboarding. Platform onboarding or listing may be subject to charges at a later stage, based on the final approval and commercial process.
+          </p>
+        </div>
       </div>
 
       {/* Footer */}
