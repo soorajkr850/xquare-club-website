@@ -13,8 +13,8 @@ const SHEET_ID   = "1AVFWMdj7QrsKdIb7yYev62gniGiLBFloknD55V_EoSw";
 const SHEET_TAB  = "Submissions";
 const FOLDER_NAME = "XQUARE CLUB — Influencer Uploads";
 
-/* ── Business Listings spreadsheet ── */
-let BUSINESS_SHEET_ID: string | null = "1Ujpt-mFM2RazZAZt-zze1qvd4UsNBUprhParbrDOOf4";
+/* ── Business Listings spreadsheet (one canonical sheet for all environments) ── */
+let BUSINESS_SHEET_ID: string | null = "1BGCOC4T8ymbiN_HGuM7AOjaXGkE8yyxYKxoRpWvkzYE";
 const BUSINESS_SHEET_NAME = "XQUARE CLUB — Business Listings";
 const BUSINESS_SHEET_TAB  = "Listings";
 const BUSINESS_HEADERS = ["Submitted At", "First Name", "Last Name", "Business Name"];
