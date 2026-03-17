@@ -393,67 +393,80 @@ export default function Landing() {
 
       {/* Early Access & Registration */}
       <Section id="register" darker className="border-t border-white/5">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-5xl mx-auto">
+
+          {/* header */}
+          <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold tracking-wide text-sm mb-6">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
               EARLY ACCESS
             </div>
             <h2 className="text-4xl md:text-5xl mb-6">Be among the first to join XQUARE CLUB</h2>
-            <p className="text-xl text-white/70 mb-4">
-              We are currently inviting influencers to apply for early access to XQUARE CLUB.
+            <p className="text-xl text-white/70 mb-3">
+              We are currently inviting influencers and businesses to apply for early access to XQUARE CLUB.
             </p>
-            <p className="text-lg text-white/60 mb-2">
-              This is your opportunity to be part of XQUARE CLUB from the beginning and express your interest in joining the platform.
-            </p>
-            <p className="text-lg text-white/60 mb-8">
-              Submitting your application is completely free.*
+            <p className="text-base text-white/50">
+              If you are looking to grow through collaboration, visibility, and new opportunities, this is your chance to get in early.{" "}
+              <span className="text-white/70 font-medium">Applications are free to submit.*</span>
             </p>
           </div>
 
-          <div className="bg-card border border-card-border rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-blue-600 to-primary" />
+          {/* two cards */}
+          <div className="grid md:grid-cols-2 gap-6 mb-10">
 
-            <h3 className="text-3xl mb-4 font-display">Join XQUARE CLUB as an Influencer</h3>
-            <p className="text-white/70 mb-8">
-              Fill out our onboarding form to express your interest in joining XQUARE CLUB as an influencer. Once registered, our team will review your submission and connect with you on the next steps.
-            </p>
-
-            <div className="flex items-center gap-3 mb-8 p-4 bg-white/5 rounded-xl border border-white/10">
-              <ShieldCheck className="text-primary w-6 h-6 flex-shrink-0" />
-              <p className="text-white/90 font-medium">No payment. No commitment. Just early access to something built for growth.</p>
+            {/* Influencer card */}
+            <div className="bg-card border border-card-border rounded-2xl p-8 flex flex-col relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-primary" />
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-10 h-10 rounded-xl bg-primary/15 border border-primary/25 flex items-center justify-center text-xl">🎬</div>
+                <h3 className="text-2xl font-bold">For Influencers</h3>
+              </div>
+              <p className="text-white/60 text-sm leading-relaxed mb-8 flex-1">
+                Apply through our influencer onboarding form and let us know your interest in joining XQUARE CLUB as a creator.
+              </p>
+              <div className="mt-auto">
+                <motion.button
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => window.location.href = "/influencer-onboarding"}
+                  className="w-full py-3 rounded-xl bg-primary text-white font-semibold hover:bg-blue-400 transition-all shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_-3px_rgba(59,130,246,0.7)] mb-3"
+                >
+                  Apply as an Influencer
+                </motion.button>
+                <p className="text-white/30 text-xs text-center">Takes about 5 minutes · Free to apply*</p>
+              </div>
             </div>
 
-            {/* What the form covers */}
-            <div className="grid sm:grid-cols-2 gap-3 mb-10">
-              {[
-                { icon: "📱", label: "Social Media Profile" },
-                { icon: "📊", label: "Dashboard & Follower Stats" },
-                { icon: "🎯", label: "Your Niche & Content Type" },
-                { icon: "🤝", label: "Brand Collaboration Details" },
-                { icon: "💰", label: "Monetization & Pricing" },
-                { icon: "🪪", label: "Basic Details & KYC" },
-              ].map(item => (
-                <div key={item.label} className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/10">
-                  <span className="text-lg">{item.icon}</span>
-                  <span className="text-white/70 text-sm font-medium">{item.label}</span>
-                  <CheckCircle2 className="w-4 h-4 text-primary ml-auto flex-shrink-0" />
-                </div>
-              ))}
+            {/* Seller card */}
+            <div className="bg-card border border-card-border rounded-2xl p-8 flex flex-col relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-primary" />
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-10 h-10 rounded-xl bg-primary/15 border border-primary/25 flex items-center justify-center text-xl">🏪</div>
+                <h3 className="text-2xl font-bold">For Businesses</h3>
+              </div>
+              <p className="text-white/60 text-sm leading-relaxed mb-8 flex-1">
+                Apply through our seller onboarding form to express your interest in listing your business on XQUARE CLUB.
+              </p>
+              <div className="mt-auto">
+                <motion.button
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => window.location.href = "/list-your-business"}
+                  className="w-full py-3 rounded-xl bg-primary text-white font-semibold hover:bg-blue-400 transition-all shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_-3px_rgba(59,130,246,0.7)] mb-3"
+                >
+                  Apply as a Seller
+                </motion.button>
+                <p className="text-white/30 text-xs text-center">Takes about 5 minutes · Free to apply*</p>
+              </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4">
-              <motion.button
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => window.location.href = "/influencer-onboarding"}
-                className="w-full sm:w-auto flex items-center justify-center gap-2 px-10 py-4 rounded-2xl bg-primary text-white font-bold text-lg shadow-[0_0_30px_-5px_rgba(59,130,246,0.5)] hover:shadow-[0_0_40px_-3px_rgba(59,130,246,0.7)] hover:bg-blue-400 transition-all"
-              >
-                Start Application <ChevronRight className="w-5 h-5" />
-              </motion.button>
-              <p className="text-white/30 text-sm">Takes about 5 minutes · Free to apply*</p>
-            </div>
           </div>
+
+          {/* footer note */}
+          <p className="text-center text-white/50 text-sm">
+            No payment. No commitment. Just an early step into something built for growth.
+          </p>
+
         </div>
       </Section>
 
