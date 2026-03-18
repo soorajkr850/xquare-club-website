@@ -290,7 +290,7 @@ export default function InfluencerOnboarding() {
       if (form.profilePhoto)        fd.append("profilePhoto",        form.profilePhoto);
       if (form.kycDoc)              fd.append("kycDoc",              form.kycDoc);
 
-      const res = await fetch("https://xquare-club--techzitlearners.replit.app/api/onboarding", {
+      const res = await fetch("https://workspaceapi-server-production-078b.up.railway.app/api/onboarding", {
         method: "POST",
         body: fd, /* browser sets Content-Type with correct boundary automatically */
       });

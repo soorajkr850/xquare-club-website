@@ -243,7 +243,7 @@ export default function BusinessListing() {
         else if (Array.isArray(v)) fd.append(k, v.join(", "));
         else if (v !== null && v !== undefined) fd.append(k, String(v));
       });
-      const res = await fetch("https://xquare-club--techzitlearners.replit.app/api/business-listing", { method: "POST", body: fd });
+      const res = await fetch("https://workspaceapi-server-production-078b.up.railway.app/api/business-listing", { method: "POST", body: fd });
       if (!res.ok) throw new Error(`${res.status}`);
     } catch (ex) {
       console.error("Submission error:", ex);
