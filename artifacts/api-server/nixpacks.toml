@@ -1,8 +1,8 @@
 [phases.install]
-cmds = ['npm install -g pnpm@10.26.1', 'export PATH="/root/.npm-global/bin:$PATH" && pnpm install --frozen-lockfile']
+cmds = ['npm install --production']
 
 [phases.build]
-cmds = ['export PATH="/root/.npm-global/bin:$PATH" && pnpm run build']
+cmds = ['echo "already built"']
 
 [start]
-cmd = 'node dist/index.js'
+cmd = 'node dist/index.cjs'
