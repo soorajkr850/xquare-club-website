@@ -378,13 +378,10 @@ export default function InfluencerOnboarding() {
       if (form.profilePhoto) fd.append("profilePhoto", form.profilePhoto);
       if (form.kycDoc) fd.append("kycDoc", form.kycDoc);
 
-      const res = await fetch(
-        "https://https://api.xquareclub.com/api/onboarding",
-        {
-          method: "POST",
-          body: fd /* browser sets Content-Type with correct boundary automatically */,
-        },
-      );
+      const res = await fetch("https://api.xquareclub.com/api/onboarding", {
+        method: "POST",
+        body: fd /* browser sets Content-Type with correct boundary automatically */,
+      });
 
       if (!res.ok) throw new Error(`Server error ${res.status}`);
     } catch (err) {
