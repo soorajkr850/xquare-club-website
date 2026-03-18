@@ -134,8 +134,8 @@ export default function Landing() {
             >
               <ActionButtons />
               <p className="mt-6 text-sm text-white/50 flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-primary" />
-                Applications to Early Access are <button onClick={scrollToDisclaimer} className="underline decoration-white/50 hover:decoration-white transition-colors cursor-pointer p-0 m-0 bg-transparent border-0 leading-none">free*</button>. Influencers and sellers can apply now.
+                <CheckCircle2 size={16} className="text-primary flex-shrink-0" />
+                <span>{"Applications to Early Access are "}<span onClick={scrollToDisclaimer} className="underline decoration-white/50 hover:decoration-white transition-colors cursor-pointer">{"free*"}</span>{". Influencers and sellers can apply now."}</span>
               </p>
             </motion.div>
 
