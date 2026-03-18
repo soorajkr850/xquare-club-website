@@ -531,17 +531,15 @@ export default function Landing() {
               Join early. <span className="text-primary">Grow together.</span> Multiply opportunities.
             </p>
           </div>
+
+          {/* Disclaimer inside the section */}
+          <div id="disclaimer" className="scroll-mt-20 mt-12 pt-8 border-t border-white/10">
+            <p className="text-white/40 text-xs max-w-2xl mx-auto">
+              *Application submission is currently free for both influencers and sellers. Every application will be reviewed and verified manually by the XQUARE CLUB team before onboarding. Platform onboarding or listing may be subject to charges at a later stage, based on the final approval and commercial process.
+            </p>
+          </div>
         </div>
       </Section>
-
-      {/* Disclaimer — just above footer border */}
-      <div id="disclaimer" className="relative z-20 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-6 py-8">
-          <p className="text-white/50 text-sm max-w-3xl">
-            *Application submission is currently free for both influencers and sellers. Every application will be reviewed and verified manually by the XQUARE CLUB team before onboarding. Platform onboarding or listing may be subject to charges at a later stage, based on the final approval and commercial process.
-          </p>
-        </div>
-      </div>
 
       {/* Footer */}
       <footer id="contact" className="border-t border-white/10 bg-black pt-16 pb-8 text-center md:text-left relative z-20">
