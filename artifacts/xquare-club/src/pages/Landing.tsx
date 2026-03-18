@@ -509,12 +509,14 @@ export default function Landing() {
 
       {/* Footer */}
       <footer className="border-t border-white/10 bg-black pt-16 pb-8 text-center md:text-left relative z-20">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center mb-12">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 mb-12">
+
+          {/* Brand */}
           <div>
             <div className="flex items-center justify-center md:justify-start mb-4">
-              <img 
-                src={`${import.meta.env.BASE_URL}images/xquare-logo.png`} 
-                alt="XQUARE CLUB Logo" 
+              <img
+                src={`${import.meta.env.BASE_URL}images/xquare-logo.png`}
+                alt="XQUARE CLUB Logo"
                 className="h-10 w-auto object-contain"
               />
             </div>
@@ -522,11 +524,38 @@ export default function Landing() {
               A community-driven platform connecting small businesses and growing influencers.
             </p>
           </div>
-          <div className="flex gap-6 justify-center md:justify-end text-sm text-white/50">
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-white font-semibold text-sm mb-4 uppercase tracking-wide">Contact Us</h4>
+            <ul className="space-y-2 text-white/50 text-sm">
+              <li>
+                <a href="tel:+919567089117" className="hover:text-white transition-colors">
+                  📞 +91 95670 89117
+                </a>
+              </li>
+              <li>
+                <a href="mailto:hello@xquareclub.com" className="hover:text-white transition-colors">
+                  ✉️ hello@xquareclub.com
+                </a>
+              </li>
+              <li className="leading-relaxed pt-1">
+                📍 Xquare Club Private Limited<br />
+                55/956, Main Avenue Road,<br />
+                Panampilly Nagar, Kochi<br />
+                Eranakulam, Kerala — 683036
+              </li>
+            </ul>
+          </div>
+
+          {/* Nav */}
+          <div className="flex flex-col gap-3 items-center md:items-end text-sm text-white/50">
+            <h4 className="text-white font-semibold text-sm uppercase tracking-wide mb-1">Navigate</h4>
             <button onClick={() => document.getElementById("about")?.scrollIntoView()} className="hover:text-white transition-colors">About</button>
             <button onClick={() => document.getElementById("how-it-works")?.scrollIntoView()} className="hover:text-white transition-colors">How it works</button>
             <button onClick={scrollToRegister} className="hover:text-white transition-colors">Early Access</button>
           </div>
+
         </div>
         <div className="max-w-7xl mx-auto px-6 text-center text-white/30 text-sm pt-8 border-t border-white/5">
           <p>&copy; {new Date().getFullYear()} XQUARE CLUB. All rights reserved.</p>
