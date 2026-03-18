@@ -535,13 +535,13 @@ export default function Landing() {
       </Section>
 
       {/* Disclaimer — just above footer border */}
-      <section id="disclaimer" className="scroll-mt-20 bg-navy py-10 relative z-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-white/50 text-sm max-w-3xl mx-auto md:mx-0">
+      <div id="disclaimer" className="relative z-20 scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-6 py-8">
+          <p className="text-white/50 text-sm max-w-3xl">
             *Application submission is currently free for both influencers and sellers. Every application will be reviewed and verified manually by the XQUARE CLUB team before onboarding. Platform onboarding or listing may be subject to charges at a later stage, based on the final approval and commercial process.
           </p>
         </div>
-      </section>
+      </div>
 
       {/* Footer */}
       <footer id="contact" className="border-t border-white/10 bg-black pt-16 pb-8 text-center md:text-left relative z-20">
