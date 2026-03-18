@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronRight, CheckCircle2, TrendingUp, Users, Target, ShieldCheck } from "lucide-react";
+import { ChevronRight, CheckCircle2, TrendingUp, Users, Target, ShieldCheck, Menu, X } from "lucide-react";
 import { Button } from "@/components/Button";
 import { SellerModal } from "@/components/SellerModal";
 import { Section } from "@/components/Section";
 
 export default function Landing() {
   const [isSellerModalOpen, setIsSellerModalOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToDisclaimer = () => {
     document.getElementById("disclaimer")?.scrollIntoView({ behavior: "smooth" });
@@ -40,13 +41,43 @@ export default function Landing() {
               className="h-10 w-auto object-contain"
             />
           </div>
+          {/* Desktop menu */}
           <div className="hidden md:flex gap-4">
             <Button variant="ghost" size="sm" onClick={() => document.getElementById("about")?.scrollIntoView()}>About</Button>
             <Button variant="ghost" size="sm" onClick={() => document.getElementById("how-it-works")?.scrollIntoView()}>How it Works</Button>
             <Button variant="ghost" size="sm" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>Contact Us</Button>
             <Button variant="primary" size="sm" onClick={scrollToRegister}>Join Now</Button>
           </div>
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden text-white p-2"
+            onClick={() => setMobileMenuOpen(v => !v)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+        {/* Mobile dropdown */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-black/95 border-t border-white/10 px-6 py-4 flex flex-col gap-1">
+            <button
+              className="text-white/70 hover:text-white text-left py-3 text-sm font-medium border-b border-white/5"
+              onClick={() => { document.getElementById("about")?.scrollIntoView({ behavior: "smooth" }); setMobileMenuOpen(false); }}
+            >About</button>
+            <button
+              className="text-white/70 hover:text-white text-left py-3 text-sm font-medium border-b border-white/5"
+              onClick={() => { document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" }); setMobileMenuOpen(false); }}
+            >How it Works</button>
+            <button
+              className="text-white/70 hover:text-white text-left py-3 text-sm font-medium border-b border-white/5"
+              onClick={() => { document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); setMobileMenuOpen(false); }}
+            >Contact Us</button>
+            <button
+              className="mt-2 w-full py-3 rounded-xl bg-primary text-white font-semibold text-sm hover:bg-blue-400 transition-all"
+              onClick={() => { scrollToRegister(); setMobileMenuOpen(false); }}
+            >Join Now</button>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -104,7 +135,7 @@ export default function Landing() {
               <ActionButtons />
               <p className="mt-6 text-sm text-white/50 flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-primary" />
-                Applications to Early Access are <button onClick={scrollToDisclaimer} className="underline decoration-white/50 hover:decoration-white transition-colors cursor-pointer">free*</button>. Influencers and sellers can apply now.
+                Applications to Early Access are <button onClick={scrollToDisclaimer} className="underline decoration-white/50 hover:decoration-white transition-colors cursor-pointer p-0 m-0 bg-transparent border-0 leading-none">free*</button>. Influencers and sellers can apply now.
               </p>
             </motion.div>
 
