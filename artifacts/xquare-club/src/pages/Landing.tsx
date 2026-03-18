@@ -8,6 +8,10 @@ import { Section } from "@/components/Section";
 export default function Landing() {
   const [isSellerModalOpen, setIsSellerModalOpen] = useState(false);
 
+  const scrollToDisclaimer = () => {
+    document.getElementById("disclaimer")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const scrollToRegister = () => {
     document.getElementById("register")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -39,6 +43,7 @@ export default function Landing() {
           <div className="hidden md:flex gap-4">
             <Button variant="ghost" size="sm" onClick={() => document.getElementById("about")?.scrollIntoView()}>About</Button>
             <Button variant="ghost" size="sm" onClick={() => document.getElementById("how-it-works")?.scrollIntoView()}>How it Works</Button>
+            <Button variant="ghost" size="sm" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>Contact Us</Button>
             <Button variant="primary" size="sm" onClick={scrollToRegister}>Join Now</Button>
           </div>
         </div>
@@ -99,7 +104,7 @@ export default function Landing() {
               <ActionButtons />
               <p className="mt-6 text-sm text-white/50 flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-primary" />
-                Applications to Early Access are free*. Influencers and sellers can apply now.
+                Applications to Early Access are <button onClick={scrollToDisclaimer} className="underline decoration-white/50 hover:decoration-white transition-colors cursor-pointer">free*</button>. Influencers and sellers can apply now.
               </p>
             </motion.div>
 
@@ -407,7 +412,7 @@ export default function Landing() {
             </p>
             <p className="text-base text-white/50">
               If you are looking to grow through collaboration, visibility, and new opportunities, this is your chance to get in early.{" "}
-              <span className="text-white/70 font-medium">Applications are free to submit.*</span>
+              <button onClick={scrollToDisclaimer} className="text-white/70 font-medium underline decoration-white/50 hover:decoration-white transition-colors cursor-pointer">Applications are free to submit.*</button>
             </p>
           </div>
 
@@ -433,7 +438,7 @@ export default function Landing() {
                 >
                   Apply as an Influencer
                 </motion.button>
-                <p className="text-white/30 text-xs text-center">Takes about 5 minutes · Free to apply*</p>
+                <p className="text-white/30 text-xs text-center">Takes about 5 minutes · <button onClick={scrollToDisclaimer} className="underline decoration-white/30 hover:decoration-white/60 transition-colors cursor-pointer">Free to apply*</button></p>
               </div>
             </div>
 
@@ -456,7 +461,7 @@ export default function Landing() {
                 >
                   Apply as a Seller
                 </motion.button>
-                <p className="text-white/30 text-xs text-center">Takes about 5 minutes · Free to apply*</p>
+                <p className="text-white/30 text-xs text-center">Takes about 5 minutes · <button onClick={scrollToDisclaimer} className="underline decoration-white/30 hover:decoration-white/60 transition-colors cursor-pointer">Free to apply*</button></p>
               </div>
             </div>
 
@@ -499,7 +504,7 @@ export default function Landing() {
       </Section>
 
       {/* Disclaimer — just above footer border */}
-      <div className="relative z-20">
+      <div id="disclaimer" className="relative z-20">
         <div className="max-w-7xl mx-auto px-6 py-8">
           <p className="text-white/50 text-sm max-w-3xl">
             *Application submission is currently free for both influencers and sellers. Every application will be reviewed and verified manually by the XQUARE CLUB team before onboarding. Platform onboarding or listing may be subject to charges at a later stage, based on the final approval and commercial process.
@@ -508,7 +513,7 @@ export default function Landing() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 bg-black pt-16 pb-8 text-center md:text-left relative z-20">
+      <footer id="contact" className="border-t border-white/10 bg-black pt-16 pb-8 text-center md:text-left relative z-20">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 mb-12">
 
           {/* Brand */}
