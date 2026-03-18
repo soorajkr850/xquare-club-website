@@ -1,0 +1,454 @@
+[
+  {
+    "fullName": "Test User",
+    "email": "test@test.com",
+    "mobile": "9999999999",
+    "platform": "Instagram",
+    "handle": "@test",
+    "profileLink": "https://instagram.com/test",
+    "followerRange": "10k – 30k",
+    "niches": [
+      "Travel"
+    ],
+    "collabFreq": "Monthly",
+    "priceRange": "₹1,000 – ₹3,000",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "consent": true,
+    "_submittedAt": "2026-03-16T12:05:00.315Z"
+  },
+  {
+    "consent": true,
+    "platform": "Instagram",
+    "handle": "eeee",
+    "profileLink": "https://www.instagram.com/?hl=en",
+    "followerRange": "Under 1k",
+    "niches": [
+      "Fashion / Beauty / Skincare"
+    ],
+    "nicheOther": "",
+    "earnMethods": [
+      "Brand collaborations (paid promotions)"
+    ],
+    "earnOther": "",
+    "collabFreq": "Weekly or more",
+    "collabSource": [
+      "Brands contact me directly"
+    ],
+    "collabSourceOther": "",
+    "pricingMethod": [
+      "Fixed pricing (mostly the same rate)"
+    ],
+    "pricingOther": "",
+    "priceRange": "Under ₹1,000",
+    "fullName": "Learners Techzit",
+    "mobile": "454894+4",
+    "email": "techzitlearners@gmail.com",
+    "city": "kerala",
+    "state": "kerala",
+    "kycType": "pdf",
+    "kycNumber": "3321654615",
+    "dashboardScreenshotName": "image.png (3).png",
+    "profilePhotoName": "image.png (3).png",
+    "kycDocName": "image.png (3).png",
+    "_submittedAt": "2026-03-16T12:16:36.952Z"
+  },
+  {
+    "consent": true,
+    "platform": "Instagram",
+    "handle": "ugi",
+    "profileLink": "dsf",
+    "followerRange": "Under 1k",
+    "niches": [
+      "Fashion / Beauty / Skincare"
+    ],
+    "nicheOther": "",
+    "earnMethods": [
+      "Brand collaborations (paid promotions)"
+    ],
+    "earnOther": "",
+    "collabFreq": "Weekly or more",
+    "collabSource": [
+      "Brands contact me directly"
+    ],
+    "collabSourceOther": "",
+    "pricingMethod": [
+      "Fixed pricing (mostly the same rate)"
+    ],
+    "pricingOther": "",
+    "priceRange": "₹1,000 – ₹3,000",
+    "fullName": "Learners Techzit",
+    "mobile": "566",
+    "email": "techzitlearners@gmail.com",
+    "city": "edwd",
+    "state": "kerala",
+    "kycType": "pdf",
+    "kycNumber": "454654",
+    "dashboardScreenshotName": "image.png (3).png",
+    "profilePhotoName": "image.png (3).png",
+    "kycDocName": "image.png (3).png",
+    "_submittedAt": "2026-03-16T12:32:43.925Z"
+  },
+  {
+    "consent": true,
+    "platform": "Instagram",
+    "handle": "@xquaretest",
+    "profileLink": "https://instagram.com/xquaretest",
+    "followerRange": "10k – 30k",
+    "niches": [
+      "Travel",
+      "Lifestyle"
+    ],
+    "earnMethods": [
+      "Brand collaborations (paid promotions)"
+    ],
+    "collabFreq": "Monthly",
+    "collabSource": [
+      "Brands contact me directly"
+    ],
+    "pricingMethod": [
+      "Fixed pricing (mostly the same rate)"
+    ],
+    "priceRange": "₹3,000 – ₹7,000",
+    "fullName": "Test Influencer",
+    "mobile": "9876543210",
+    "email": "test@xquareclub.com",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "_submittedAt": "2026-03-16T12:34:18.862Z"
+  },
+  {
+    "consent": true,
+    "platform": "Snapchat",
+    "handle": "rrrr",
+    "profileLink": "rrrr",
+    "followerRange": "Under 1k",
+    "niches": [
+      "Fashion / Beauty / Skincare"
+    ],
+    "nicheOther": "",
+    "earnMethods": [
+      "Brand collaborations (paid promotions)"
+    ],
+    "earnOther": "",
+    "collabFreq": "Weekly or more",
+    "collabSource": [
+      "Brands contact me directly"
+    ],
+    "collabSourceOther": "",
+    "pricingMethod": [
+      "Fixed pricing (mostly the same rate)"
+    ],
+    "pricingOther": "",
+    "priceRange": "₹1,000 – ₹3,000",
+    "fullName": "Learners Techzit",
+    "mobile": "2236769",
+    "email": "techzitlearners@gmail.com",
+    "city": "k",
+    "state": "kl",
+    "kycType": "pdf",
+    "kycNumber": "eee",
+    "dashboardScreenshotName": "image.png (3).png",
+    "profilePhotoName": "image.png (3).png",
+    "kycDocName": "image.png (3).png",
+    "_submittedAt": "2026-03-16T12:39:42.622Z"
+  },
+  {
+    "consent": true,
+    "platform": "X (Twitter)",
+    "handle": "dfd",
+    "profileLink": "sdsd",
+    "followerRange": "Under 1k",
+    "niches": [
+      "Travel"
+    ],
+    "nicheOther": "",
+    "earnMethods": [
+      "Brand collaborations (paid promotions)"
+    ],
+    "earnOther": "",
+    "collabFreq": "2–3 times per month",
+    "collabSource": [
+      "Brands contact me directly"
+    ],
+    "collabSourceOther": "",
+    "pricingMethod": [
+      "Fixed pricing (mostly the same rate)"
+    ],
+    "pricingOther": "",
+    "priceRange": "Under ₹1,000",
+    "fullName": "Learners Techzit",
+    "mobile": "18764671",
+    "email": "techzitlearners@gmail.com",
+    "city": "kdkd",
+    "state": "kkd",
+    "kycType": "pdf",
+    "kycNumber": "45612",
+    "dashboardScreenshotName": "image.png (3).png",
+    "profilePhotoName": "image.png (3).png",
+    "kycDocName": "image.png (3).png",
+    "_submittedAt": "2026-03-16T12:46:06.714Z"
+  },
+  {
+    "consent": true,
+    "platform": "Instagram",
+    "handle": "xquaretest",
+    "profileLink": "https://instagram.com/xquaretest",
+    "followerRange": "10k",
+    "niches": [
+      "Travel"
+    ],
+    "nicheOther": "",
+    "earnMethods": [],
+    "earnOther": "",
+    "collabFreq": "Monthly",
+    "collabSource": [],
+    "collabSourceOther": "",
+    "pricingMethod": [],
+    "pricingOther": "",
+    "priceRange": "Under 1k",
+    "fullName": "Test User",
+    "mobile": "9876543210",
+    "email": "test@test.com",
+    "city": "Chennai",
+    "state": "TN",
+    "kycType": "",
+    "kycNumber": "",
+    "dashboardScreenshotUrl": "https://drive.google.com/file/d/1_F-QnLN8FrezsofjIMMsQkjvZO5TgF5i/view?usp=drivesdk",
+    "profilePhotoUrl": "https://drive.google.com/file/d/16W5dDXkeXQ6IqV3EraRpZ5f4AvDvrKTf/view?usp=drivesdk",
+    "kycDocUrl": null,
+    "_submittedAt": "2026-03-16T12:51:38.623Z"
+  },
+  {
+    "consent": true,
+    "platform": "Instagram",
+    "handle": "ww",
+    "profileLink": "https://www.instagram.com/?hl=en",
+    "followerRange": "Under 1k",
+    "niches": [
+      "Fashion / Beauty / Skincare",
+      "Education"
+    ],
+    "nicheOther": "",
+    "earnMethods": [
+      "Brand collaborations (paid promotions)"
+    ],
+    "earnOther": "",
+    "collabFreq": "2–3 times per month",
+    "collabSource": [
+      "Brands contact me directly"
+    ],
+    "collabSourceOther": "",
+    "pricingMethod": [
+      "Depends on deliverables (reel/story/post count)"
+    ],
+    "pricingOther": "",
+    "priceRange": "Under ₹1,000",
+    "fullName": "Learners Techzit",
+    "mobile": "36464",
+    "email": "techzitlearners@gmail.com",
+    "city": "kl",
+    "state": "kl",
+    "kycType": "pdf",
+    "kycNumber": "165464",
+    "dashboardScreenshotUrl": "https://drive.google.com/file/d/1i3NQxaKH3DbVuAJ0VgkuXBh01j6AMqiC/view?usp=drivesdk",
+    "profilePhotoUrl": "https://drive.google.com/file/d/1mHfgCc3bH8LCNAqebcIgZ6iYfMq0pQlx/view?usp=drivesdk",
+    "kycDocUrl": "https://drive.google.com/file/d/1uP2oCbCj361ytDZ637IuoSAEegSvR6jY/view?usp=drivesdk",
+    "_submittedAt": "2026-03-16T12:55:45.322Z"
+  },
+  {
+    "consent": true,
+    "platform": "Instagram",
+    "handle": "praveekumar",
+    "profileLink": "https://www.instagram.com/?hl=en",
+    "followerRange": "50k–100k",
+    "niches": [
+      "Fashion / Beauty / Skincare",
+      "Travel",
+      "Education",
+      "Parenting / Kids",
+      "Finance / Business"
+    ],
+    "nicheOther": "",
+    "earnMethods": [
+      "Brand collaborations (paid promotions)"
+    ],
+    "earnOther": "",
+    "collabFreq": "Weekly or more",
+    "collabSource": [
+      "Brands contact me directly"
+    ],
+    "collabSourceOther": "",
+    "pricingMethod": [
+      "Fixed pricing (mostly the same rate)"
+    ],
+    "pricingOther": "",
+    "priceRange": "Under ₹1,000",
+    "fullName": "praveeen",
+    "mobile": "934528674",
+    "email": "pravenn@gmail.com",
+    "city": "kl",
+    "state": "kl",
+    "kycType": "pdf",
+    "kycNumber": "2546",
+    "dashboardScreenshotUrl": "https://drive.google.com/file/d/1QnFnqp24tBNI6evZjHs1uJRvhJXjmEaU/view?usp=drivesdk",
+    "profilePhotoUrl": "https://drive.google.com/file/d/1dgfQUzpuxxuxZK7qkSbmN8C_H3egwJfW/view?usp=drivesdk",
+    "kycDocUrl": "https://drive.google.com/file/d/1f4voxHh2Nxc2qhfJnugm7VW8xQUXYEOE/view?usp=drivesdk",
+    "_submittedAt": "2026-03-16T13:04:57.274Z"
+  },
+  {
+    "consent": true,
+    "platform": "Facebook",
+    "handle": "RISHATH",
+    "profileLink": "https://",
+    "followerRange": "50k–100k",
+    "niches": [
+      "Travel",
+      "Fashion / Beauty / Skincare",
+      "Food / Restaurants / Recipes",
+      "Fitness / Sports"
+    ],
+    "nicheOther": "",
+    "earnMethods": [
+      "Brand collaborations (paid promotions)",
+      "Platform monetization (YouTube ads/bonuses, etc.)",
+      "Affiliate commissions (links/codes)",
+      "Selling own products/services"
+    ],
+    "earnOther": "",
+    "collabFreq": "Weekly or more",
+    "collabSource": [
+      "Brands contact me directly",
+      "Agency / manager"
+    ],
+    "collabSourceOther": "",
+    "pricingMethod": [],
+    "pricingOther": "",
+    "priceRange": "Under ₹1,000",
+    "fullName": "Learners Techzit",
+    "mobile": "3215464644",
+    "email": "techzitlearners@gmail.com",
+    "city": "kl",
+    "state": "kl",
+    "kycType": "pdf",
+    "kycNumber": "123654",
+    "dashboardScreenshotUrl": "https://drive.google.com/file/d/1WzvlhdtUHd9f1C_YkTCxE_8hTg5Y6Nz4/view?usp=drivesdk",
+    "profilePhotoUrl": "https://drive.google.com/file/d/1qWLh5Qj4u2xpWNQK92EiqKL8MzB59kPJ/view?usp=drivesdk",
+    "kycDocUrl": "https://drive.google.com/file/d/1MspjL5FGmGwrOAGCXwcWHSf3us1XYzEf/view?usp=drivesdk",
+    "_submittedAt": "17/3/2026, 12:33:47"
+  },
+  {
+    "consent": true,
+    "platform": "Instagram",
+    "handle": "xquare club",
+    "profileLink": "https://www.instagram.com/?hl=en",
+    "followerRange": "50k–100k",
+    "niches": [
+      "Fashion / Beauty / Skincare",
+      "Fitness / Sports"
+    ],
+    "nicheOther": "",
+    "earnMethods": [
+      "Brand collaborations (paid promotions)"
+    ],
+    "earnOther": "",
+    "collabFreq": "Weekly or more",
+    "collabSource": [
+      "Brands contact me directly"
+    ],
+    "collabSourceOther": "",
+    "pricingMethod": [
+      "Depends on deliverables (reel/story/post count)"
+    ],
+    "pricingOther": "",
+    "priceRange": "₹1,000 – ₹3,000",
+    "fullName": "Learners Techzit",
+    "mobile": "9345012924",
+    "email": "techzitlearners@gmail.com",
+    "city": "kl",
+    "state": "kl",
+    "kycType": "pdf",
+    "kycNumber": "12542",
+    "dashboardScreenshotUrl": null,
+    "profilePhotoUrl": null,
+    "kycDocUrl": "https://drive.google.com/file/d/104fTkk1STedSf6zHNI3JCoxQLNafyCvQ/view?usp=drivesdk",
+    "_submittedAt": "17/3/2026, 18:23:10"
+  },
+  {
+    "consent": true,
+    "platform": "Instagram",
+    "handle": "xquare club",
+    "profileLink": "https://xquare club.com",
+    "followerRange": "50k–100k",
+    "niches": [
+      "Fashion / Beauty / Skincare",
+      "Food / Restaurants / Recipes"
+    ],
+    "nicheOther": "",
+    "earnMethods": [
+      "Brand collaborations (paid promotions)"
+    ],
+    "earnOther": "",
+    "collabFreq": "Weekly or more",
+    "collabSource": [
+      "Brands contact me directly"
+    ],
+    "collabSourceOther": "",
+    "pricingMethod": [
+      "Fixed pricing (mostly the same rate)"
+    ],
+    "pricingOther": "",
+    "priceRange": "Under ₹1,000",
+    "fullName": "Learners Techzit",
+    "mobile": "985674123",
+    "email": "techzitlearners@gmail.com",
+    "city": "kl",
+    "state": "kl",
+    "kycType": "pdf",
+    "kycNumber": "1284265",
+    "dashboardScreenshotUrl": "https://drive.google.com/file/d/1OGcTvkfbtlduBhBTpruufSXMXNSZwB3r/view?usp=drivesdk",
+    "profilePhotoUrl": "https://drive.google.com/file/d/1mRQYqKxYHS8miWdQAZ3FCPGAti6K2qde/view?usp=drivesdk",
+    "kycDocUrl": "https://drive.google.com/file/d/15-l32UW74B2SGCqoS9xw_GE9_JALhs7p/view?usp=drivesdk",
+    "_submittedAt": "17/3/2026, 18:24:55"
+  },
+  {
+    "consent": true,
+    "platform": "Instagram",
+    "handle": "club",
+    "profileLink": "club",
+    "followerRange": "50k–100k",
+    "niches": [
+      "Movie Reviews / Critics",
+      "Entertainment News / Pop Culture",
+      "Trailer Reactions",
+      "Cinema Analysis / Commentary",
+      "OTT / Series Reviews"
+    ],
+    "nicheOther": "",
+    "earnMethods": [
+      "Brand collaborations (paid promotions)"
+    ],
+    "earnOther": "",
+    "collabFreq": "Weekly or more",
+    "collabSource": [
+      "Brands contact me directly"
+    ],
+    "collabSourceOther": "",
+    "pricingMethod": [
+      "Depends on deliverables (reel/story/post count)"
+    ],
+    "pricingOther": "",
+    "priceRange": "Under ₹1,000",
+    "fullName": "Learners Techzit",
+    "mobile": "321654795",
+    "email": "techzitlearners@gmail.com",
+    "city": "kl",
+    "state": "kl",
+    "kycType": "pdf",
+    "kycNumber": "4552",
+    "dashboardScreenshotUrl": "https://drive.google.com/file/d/1xqsDtAtqwHoyKYgP61V3uWIb_uV41ymz/view?usp=drivesdk",
+    "profilePhotoUrl": "https://drive.google.com/file/d/1aX7ETo8Vug6oorEm5pyH6kU-Kl4fid3K/view?usp=drivesdk",
+    "kycDocUrl": "https://drive.google.com/file/d/1ER-61jEAnOYHBgCbrCADMfHTY9sk09V1/view?usp=drivesdk",
+    "_submittedAt": "17/3/2026, 18:28:09"
+  }
+]

@@ -13,11 +13,10 @@ app.use(
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
   }),
 );
 
-app.options("*", cors());
+// app.options("/*", cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api", router);
